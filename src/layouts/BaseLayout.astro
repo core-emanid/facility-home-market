@@ -1,0 +1,42 @@
+---
+import { getLangFromUrl } from "../utils/utils";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<html lang={lang == 'br' ? 'pt-br' : lang} data-theme='lofi'>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/css/flag-icons.min.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+		<meta name="generator" content={Astro.generator} />
+		<title>{Astro.props.title}</title>
+	</head>
+
+	<body>
+		<slot />
+	</body>
+    
+</html>
+
+<style is:global>
+	
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
+</style>
+
+<script is:inline>
+
+	const theme = (() => {
+	  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+		return localStorage.getItem("theme");
+	  }
+	})();
+  
+	window.localStorage.setItem("theme", theme);
+	document.querySelector('html').setAttribute('data-theme', theme);
+
+</script>

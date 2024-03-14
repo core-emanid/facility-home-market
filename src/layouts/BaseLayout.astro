@@ -1,20 +1,22 @@
 ---
-import { getLangFromUrl } from "../utils/utils";
-
-const lang = getLangFromUrl(Astro.url);
+import Header from '../components/header.astro';
 ---
 
-<html lang={lang == 'br' ? 'pt-br' : lang} data-theme='lofi'>
+<html lang='pt-br' class="h-full motion-safe:scroll-smooth" data-theme='lofi'>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/css/flag-icons.min.css"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 		<meta name="generator" content={Astro.generator} />
+		<title>Facility Home Market</title>
 		<title>{Astro.props.title}</title>
 	</head>
 
-	<body>
+	<body class="bg-[#494F4F]">
+		<Header />
 		<slot />
 	</body>
     
@@ -24,6 +26,11 @@ const lang = getLangFromUrl(Astro.url);
 	
 	body::-webkit-scrollbar {
 		display: none;
+	}
+
+	* {
+		font-family: "Open Sans", sans-serif;
+  		font-optical-sizing: auto;
 	}
 
 </style>

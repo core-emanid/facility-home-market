@@ -7,7 +7,7 @@ export const languages = {
     br: 'Brazilian Portuguese',
 };
   
-export const defaultLang = 'en';
+export const defaultLang = "br";
   
 export const showDefaultLang = false;
 

@@ -1,0 +1,39 @@
+---
+import 'swiper/css';
+---
+ 
+<div class="swiper" role="region" aria-label="carousel">
+    <div class="swiper-wrapper" role="group">
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 1</div>
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 2</div>
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 3</div>
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 4</div>
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 1</div>
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 2</div>
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 3</div>
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 4</div>
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 1</div>
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 2</div>
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 3</div>
+        <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">Slide 4</div>
+    </div>
+</div>
+
+<script>
+    import Swiper from 'swiper';
+
+    let swiper = new Swiper('.swiper', {
+        speed: 5000,
+        loop: true,
+        slidesPerView: 4,
+        freeMode: {
+            enabled: true
+        }
+    });
+
+
+    setInterval(() => {
+        swiper.slideNext();
+    }, 0);
+
+</script>

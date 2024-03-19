@@ -7,10 +7,19 @@ module.exports = {
 	plugins: [require("daisyui")],
 	daisyui: {
 		themes: [
-			"business",
-			"lofi", 
-			"retro", 
-		],
-		darkMode: "lofi",
+			{
+				facilityMarket: {
+					"primary": "#ff9549",
+					"secondary": "#3cbde5", 
+					"accent": "#72ad49",	 
+					"neutral": "#494f4f",							 
+					"base-100": "#fff",							 
+					"info": "#008cff",							 
+					"success": "#00c39a",							 
+					"warning": "#ff7600",							 
+					"error": "#ff888c",
+				},
+			}
+		]
 	}
 }

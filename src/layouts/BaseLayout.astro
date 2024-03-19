@@ -15,7 +15,7 @@ import Header from '../components/header.astro';
 		<title>{Astro.props.title}</title>
 	</head>
 
-	<body class="bg-[#494F4F]">
+	<body class="bg-neutral">
 		<Header />
 		<slot />
 	</body>
@@ -28,13 +28,10 @@ import Header from '../components/header.astro';
 		display: none;
 	}
 
+
 	* {
 		font-family: "Open Sans", sans-serif;
   		font-optical-sizing: auto;
-	}
-
-	h3 {
-		color: #72A74A;
 	}
 
 </style>

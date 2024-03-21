@@ -1,8 +1,9 @@
 ---
 import Image from "astro/components/Image.astro";
+import { Picture } from "astro:assets";
 ---
 
-<main class="grid grid-cols-2 p-4 items-center bg-neutral">
+<main class="grid grid-cols-2 p-4 items-center bg-secondary">
     <div class="flex flex-col items-center">
         <section class="w-80">
             <h1 class="font-bold text-2xl leading-loose self-center text-base-100">
@@ -11,10 +12,9 @@ import Image from "astro/components/Image.astro";
             <a href="" type="button" class="mt-10 p-2 bg-base-100 text-neutral font-bold text-sm rounded-full w-fit">Quero no meu condomínio</a>
         </section>
     </div>
-    <figure>
-        <Image loading='lazy' src="https://avatars.githubusercontent.com/u/60834135"
-                height={500} width={500}  
-                class="m-6 border-black border-1 rounded-2xl"
-                aria-label="Rafael picture" alt="my profile picture" />
-    </figure>
+    <Picture loading='lazy' src="https://breed-assets.wisdompanel.com/cat/domestic-cat-finland/European_Domestic.png"
+            height={500} width={500} format="png"
+            class="m-6 border-black border-1 rounded-2xl"
+            aria-label="Rafael picture" alt="my profile picture" />
+ 
 </main>

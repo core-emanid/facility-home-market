@@ -1,16 +1,22 @@
 ---
-import Home from '../components/sections/home.astro';
-import About from '../components/sections/about.astro';
-import Products from '../components/sections/products.astro';
-import Benefits from '../components/sections/benefits.astro';
+import Home from '../sections/home.astro';
+import About from '../sections/about.astro';
+import Products from '../sections/products.astro';
+import Benefits from '../sections/benefits.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/header.astro';
+import Reviews from '../sections/reviews.astro';
+import Footer from '../components/footer.astro';
 ---
 
 <BaseLayout>
+  <Header />
   <Home />
   <About />
   <Products />
   <Benefits />
+  <Reviews />
+  <Footer />
 </BaseLayout>
 
 

@@ -1,0 +1,57 @@
+---
+---
+
+<!-- TODO: responsive design -->
+
+<div class="bg-base-100 rounded-xl">
+    <h2 class="text-center text-3xl font-bold pt-6">Fale com a Facility!</h2>
+    <form class="p-4 grid grid-cols-2">
+        <div class="grid mx-4">
+            <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Nome</span>
+                </label>
+                <input type="text" placeholder="Nome" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Telefone</span>
+                </label>
+                <input type="text" placeholder="Telefone" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Email</span>
+                </label>
+                <input type="email" placeholder="Email" class="input input-bordered" required />
+            </div>    
+        </div>
+        <div class="grid mx-4">
+            <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Cidade</span>
+                </label>
+                <input type="text" placeholder="Cidade" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Bairro</span>
+                </label>
+                <input type="text" placeholder="Bairro" class="input input-bordered" required />
+            </div>
+            <div class="form-control self-center">
+                <label class="label">
+                    <span class="label-text">Selecione:</span>
+                </label>
+                <select class="select select-bordered w-full max-w-xs">
+                    <option selected>Sou Morador(a)</option>
+                    <option>Sou Síndico(a)</option>
+                    <option>Sou Administrador(a)</option>
+                </select>
+            </div>
+        </div>
+    </form>
+    <div class="flex w-full justify-center pt-2 pb-6">
+        <button class="btn btn-primary btn-wide bg-accent border-none">Enviar</button>
+    </div>
+</div>

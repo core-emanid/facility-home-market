@@ -1,3 +1,4 @@
-<svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+<!-- <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
     <path d="M92.81,84.09 C197.18,21.09 305.93,26.08 400.31,84.09 L515.31,158.09 L-11.56,157.08 Z" style="stroke: none; fill: #fa4945"></path>
-</svg>
+</svg> -->
+<svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-10.31,165.09 C39.68,95.08 61.56,-46.89 420.94,49.09 L498.43,167.09 L-136.56,257.08 Z" style="stroke: none; fill: #fa4945"></path></svg>

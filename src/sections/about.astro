@@ -3,7 +3,7 @@
 <!-- TODO: link call to action  -->
 <!-- TODO: mobile versions -->
 
-<section class="flex flex-row text-neutral justify-center py-10">
+<section class="flex flex-row text-neutral justify-center py-10" id="#about">
     <div class="flex flex-col w-[50%] p-8">
         <h2 class="font-bold text-5xl leading-loose">Mercado autônomo</h2>
         <p>
@@ -19,7 +19,10 @@
     </div>
     <div class="grid grid-cols-2 p-4 gap-0 w-fit">
         <div class="grid px-8 py-16 m-2 rounded-3xl shadow-xl border-3 border-black shadow-gray-300 align-center h-fit ">
-            <h3 class="text-center self-center font-extrabold text-5xl text-accent">85k</h3>
+            <h3 class="text-center self-center font-extrabold text-5xl text-accent">
+                <!-- css func to asc count -->
+                <span class="animate-[counter_2s_ease-out_forwards] [counter-set:_num_var(--num-transactions)] before:content-[counter(num)]"> k</span>    
+            </h3>
             <p class="text-center text-md">Lorem ipsum dolor sit amet</p>
         </div>
         <div class="grid px-8 py-16 m-2 rounded-3xl shadow-xl border-3 border-black shadow-gray-300 align-center h-fit ">

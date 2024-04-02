@@ -11,9 +11,9 @@ export default defineConfig({
     tailwind(),
     icon({
       include: {
-        fa: ["*"], 
-        faBrands: ["*"],
-        faRegular: ["*"]
+        //fa: ["*"], 
+        faBrands: ["instagram, facebook, whatsapp"],
+        faRegular: ["envelope"]
       },
     })
   ]

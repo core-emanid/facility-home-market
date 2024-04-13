@@ -4,6 +4,7 @@ import icon from "astro-icon";
 
 export default defineConfig({
   site: 'http://localhost:4567',
+  output: 'server',
   server:{
     port: 4567
   },
@@ -11,7 +12,6 @@ export default defineConfig({
     tailwind(),
     icon({
       include: {
-        //fa: ["*"], 
         faBrands: ["instagram, facebook, whatsapp"],
         faRegular: ["envelope"]
       },

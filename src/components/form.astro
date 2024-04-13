@@ -12,19 +12,19 @@
                 <label class="label">
                   <span class="label-text">Nome</span>
                 </label>
-                <input type="text" placeholder="Nome" class="input input-bordered" required />
+                <input type="text" placeholder="Nome" id="nome" class="input input-bordered" required />
             </div>
             <div class="form-control">
                 <label class="label">
                   <span class="label-text">Telefone</span>
                 </label>
-                <input type="text" placeholder="Telefone" class="input input-bordered" required />
+                <input type="text" placeholder="Telefone" id="telefone" class="input input-bordered" required />
             </div>
             <div class="form-control">
                 <label class="label">
                   <span class="label-text">Email</span>
                 </label>
-                <input type="email" placeholder="Email" class="input input-bordered" required />
+                <input type="email" placeholder="Email" id="email" class="input input-bordered" required />
             </div>    
         </div>
         <div class="grid mx-4">
@@ -32,19 +32,19 @@
                 <label class="label">
                   <span class="label-text">Cidade</span>
                 </label>
-                <input type="text" placeholder="Cidade" class="input input-bordered" required />
+                <input type="text" placeholder="Cidade" id="cidade" class="input input-bordered" required />
             </div>
             <div class="form-control">
                 <label class="label">
                   <span class="label-text">Bairro</span>
                 </label>
-                <input type="text" placeholder="Bairro" class="input input-bordered" required />
+                <input type="text" placeholder="Bairro" id="bairro" class="input input-bordered" required />
             </div>
             <div class="form-control self-center">
                 <label class="label">
                     <span class="label-text">Selecione:</span>
                 </label>
-                <select class="select select-bordered w-full max-w-xs">
+                <select class="select select-bordered w-full max-w-xs" id="categoria">
                     <option selected>Sou Morador(a)</option>
                     <option>Sou Síndico(a)</option>
                     <option>Sou Administrador(a)</option>
@@ -53,6 +53,79 @@
         </div>
     </form>
     <div class="flex w-full justify-center pt-2 pb-6">
-        <button class="btn btn-primary btn-wide bg-accent border-none">Enviar</button>
+        <button class="btn btn-primary btn-wide bg-accent border-none" onclick="submitForm()">Enviar</button>
     </div>
 </div>
+0
+<script is:inline>
+
+    const get = (id) => document.getElementById(id) || { value: '' }
+
+    const submitForm = () => {
+        saveInput()
+        sendmail()
+    }
+
+    // save and retrieve generic formdata from localstorage
+    const getFormData = () => {
+        const store = Object.create(null)
+        store.nome = get('nome')?.value
+        store.telefone = get('telefone')?.value
+        store.email = get('email').value
+        store.cidade = get('cidade')?.value
+        store.bairro = get('bairro')?.value
+        store.categoria = get('categoria')?.value
+        return store
+    }
+
+    const saveInput = () => {
+        const { message, subject, ...rest } = getFormData()
+        localStorage.setItem('contactinfo', JSON.stringify(rest))
+    }
+
+    // const retrieveInfo = () => {
+    //     const store = JSON.parse(localStorage.getItem('contactinfo') || '{}')
+    //     get('name').value = store.name || ''
+    //     get('surname').value = store.surname || ''
+    //     get('email').value = store.email || ''
+    //     get('tel').value = store.tel || ''
+    // }
+    // end: localstorage
+
+    // This kicks thing of, should really be on window.onload but...
+    const submitBtn = document.querySelector('[type="submit"]');;
+    submitBtn?.addEventListener('click', submitForm);
+    // retrieveInfo()
+    ;[...document.querySelectorAll('input')][0]?.focus()
+    // window.onload = () => {} // don't know why this wont work
+
+    const sendmail = async () => {
+        const { 
+            nome,
+            telefone,
+            email,
+            cidade,
+            bairro,
+            categoria
+        } = getFormData();
+        const data = await fetch('/api/sendmail.json', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ nome, telefone, email, cidade, bairro, categoria }),
+        }).then((res) => {
+            if (!res.ok) {
+                throw new Error(res.status)
+            }
+            return res.json()
+        }).catch((err) => {
+            console.log('Error', err)
+            throw new Error('Network error.')
+        })
+        console.log(data) // Here is the response from backend
+    }
+
+</script>
+
+

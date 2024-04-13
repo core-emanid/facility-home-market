@@ -5,6 +5,7 @@
 <!-- TODO: email validation and api integration -->
 
 <div class="bg-base-100 rounded-xl">
+
     <h2 class="text-center text-3xl font-bold pt-6">Fale com a Facility!</h2>
     <form class="p-4 grid grid-cols-2">
         <div class="grid mx-4">
@@ -12,19 +13,19 @@
                 <label class="label">
                   <span class="label-text">Nome</span>
                 </label>
-                <input type="text" placeholder="Nome" id="nome" class="input input-bordered" required />
+                <input type="text" placeholder="Nome" id="nome" class="input input-bordered" autofocus />
             </div>
             <div class="form-control">
                 <label class="label">
                   <span class="label-text">Telefone</span>
                 </label>
-                <input type="text" placeholder="Telefone" id="telefone" class="input input-bordered" required />
+                <input type="text" placeholder="Telefone" id="telefone" class="input input-bordered"  />
             </div>
             <div class="form-control">
                 <label class="label">
                   <span class="label-text">Email</span>
                 </label>
-                <input type="email" placeholder="Email" id="email" class="input input-bordered" required />
+                <input type="email" placeholder="Email" id="email" class="input input-bordered"  />
             </div>    
         </div>
         <div class="grid mx-4">
@@ -32,13 +33,13 @@
                 <label class="label">
                   <span class="label-text">Cidade</span>
                 </label>
-                <input type="text" placeholder="Cidade" id="cidade" class="input input-bordered" required />
+                <input type="text" placeholder="Cidade" id="cidade" class="input input-bordered"  />
             </div>
             <div class="form-control">
                 <label class="label">
                   <span class="label-text">Bairro</span>
                 </label>
-                <input type="text" placeholder="Bairro" id="bairro" class="input input-bordered" required />
+                <input type="text" placeholder="Bairro" id="bairro" class="input input-bordered"  />
             </div>
             <div class="form-control self-center">
                 <label class="label">
@@ -56,7 +57,7 @@
         <button class="btn btn-primary btn-wide bg-accent border-none" onclick="submitForm()">Enviar</button>
     </div>
 </div>
-0
+
 <script is:inline>
 
     const get = (id) => document.getElementById(id) || { value: '' }
@@ -96,7 +97,9 @@
     const submitBtn = document.querySelector('[type="submit"]');;
     submitBtn?.addEventListener('click', submitForm);
     // retrieveInfo()
-    ;[...document.querySelectorAll('input')][0]?.focus()
+    ;[...document.querySelectorAll('input')][0]?.focus({
+        preventScroll: true
+    })
     // window.onload = () => {} // don't know why this wont work
 
     const sendmail = async () => {

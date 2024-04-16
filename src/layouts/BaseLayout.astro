@@ -16,7 +16,6 @@ import Header from '../components/header.astro';
 	</head>
 
 	<body>
-		<!-- <span class="animate-[counter_3s_ease-out_forwards] [counter-set:_num_var(--num-transactions)] before:content-[counter(num)]"> million </span> -->
 		<slot />
 	</body>
 </html>
@@ -38,38 +37,9 @@ import Header from '../components/header.astro';
   		font-optical-sizing: auto;
 	}
 
-	@property --num-transactions {
-        syntax: "<integer>";
-        initial-value: 0;
-        inherits: false;
-    }
-
-    @property --num-assets {
-        syntax: "<integer>";
-        initial-value: 0;
-        inherits: false;
-    }
-
-    @property --num-users {
-        syntax: "<integer>";
-        initial-value: 0;
-        inherits: false;
-    }
-
-    @keyframes counter {
-        from {
-            --num-transactions: 0;
-            --num-assets: 0;
-            --num-users: 0;
-        }
-        to {
-            --num-transactions: 45;
-            --num-assets: 119;
-            --num-users: 4600;
-        }
-    }
 
 </style>
+
 
 <script is:inline>
 

@@ -1,16 +1,20 @@
 ---
-import Home from '../sections/home.astro';
-import About from '../sections/about.astro';
-import Products from '../sections/products.astro';
-import Benefits from '../sections/benefits.astro';
+import Home from '../@sections/home.astro';
+import About from '../@sections/about.astro';
+import Products from '../@sections/products.astro';
+import Benefits from '../@sections/benefits.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/header.astro';
-import Reviews from '../sections/reviews.astro';
+import Reviews from '../@sections/reviews.astro';
 import Footer from '../components/footer.astro';
-import Action from '../sections/action.astro';
+import Action from '../@sections/action.astro';
 import Divider from '../components/divider.astro';
 import Map from '../components/map.astro';
+import Facilities from '../@sections/facilities.astro';
 ---
+<!-- 
+  TODO: insert circle in right corner 
+-->
 
 <BaseLayout>
   <Header />
@@ -18,8 +22,8 @@ import Map from '../components/map.astro';
   <Divider />
   <About />
   <Products />
-  <!-- TODO: insert circle in right corner -->
   <Benefits />
+  <Facilities />
   <Reviews />
   <Divider color="#72ad49"/>
   <Map />

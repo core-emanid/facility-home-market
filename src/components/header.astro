@@ -1,20 +1,26 @@
 ---
 import { Icon } from "../../node_modules/astro-icon/components"
 ---
-<!-- TODO: set mobile version -->
+<!-- 
+    TODO: set mobile version 
+-->
 
 <header class="flex flex-col w-full align-center">
     <nav class="flex flex-row bg-primary justify-end pr-20 py-1">
-        <a class="rounded-full bg-white p-1 mx-1 text-primary" type="button" href="" target="_blank">
+        <a class="rounded-full bg-white p-1 mx-1 text-primary" 
+            type="button" href="https://www.instagram.com/facilityhomemarket/" 
+            target="_blank">
             <Icon name={'fa:instagram'} size={8} />
         </a>
-        <a class="rounded-full bg-white p-1 mx-1 text-primary" type="button" href="" target="_blank">
+        <a class="rounded-full bg-white p-1 mx-1 text-primary" type="button" href="#" target="_blank">
             <Icon name={'fa:facebook'} size={8} />
         </a>
-        <a class="rounded-full bg-white p-1 mx-1 text-primary" type="button" href="" target="_blank">
+        <a class="rounded-full bg-white p-1 mx-1 text-primary" type="button" href="#" target="_blank">
             <Icon name={'fa-regular:envelope'} size={8} />
         </a>
-        <a class="rounded-full bg-white p-1 mx-1 text-primary" type="button" href="" target="_blank">
+        <a class="rounded-full bg-white p-1 mx-1 text-primary" type="button" 
+            href="https://api.whatsapp.com/send/?phone=5511994961361&text=Oi,%20acessei%20o%20site%20e%20gostaria%20de%20conversar%20sobre%20a%20Facility" 
+            target="_blank">
             <Icon name={'fa:whatsapp'} size={8} />
         </a>
     </nav>
@@ -27,8 +33,9 @@ import { Icon } from "../../node_modules/astro-icon/components"
             <a class="border-none text-[#494F4F] px-4 text-center" type="button">Clientes</a>
             <a class="border-none text-[#494F4F] px-4 text-center" type="button">Contato</a>
         </div>
-        <button class="border-none rounded-full bg-secondary px-4 py-1">
-            <p class="text-base-100 font-bold">Seja um Licenciado</p>
-        </button>
+        <a href="https://api.whatsapp.com/send/?phone=5511994961361&text=Oi,%20gostaria%20de%20saber%20mais%20sobre%20ser%20licenciado%20Facility" 
+           type="button" class="border-none text-base-100 rounded-full bg-secondary px-4 py-1 font-bold">
+           Seja um licenciado
+        </a>
     </nav>
 </header>

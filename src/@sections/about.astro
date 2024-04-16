@@ -1,0 +1,105 @@
+---
+---
+
+<!-- 
+    TODO: link call to action  
+    TODO: mobile versions 
+-->
+
+<section class="flex flex-row text-neutral align-center justify-center py-12 space-x-20" id="about" >
+
+    <div class="flex flex-col justify-between">
+        <h2 class="font-extrabold text-5xl text-center">Um ano de impacto positivo <br>na vida das pessoas</h2>
+        <div class="grid grid-cols-3 p-4 gap-0 w-fit" id="facilityInNumbers">
+            <div class="grid px-8 py-16 m-2 space-y-16 w-fit">
+                <h3 class="text-center self-center font-extrabold text-5xl text-accent">
+                    <!-- css func to asc count -->
+                    <span class="[counter-set:_num_var(--num-transactions)] before:content-[counter(num)]"></span>    
+                </h3>
+                <p class="text-md text-center">Unidades em <br>funcionamento</p>
+            </div>
+            <div class="grid px-8 py-16 m-2 space-y-16">
+                <h3 class="text-center self-center font-extrabold text-5xl text-accent">
+                    <span class="[counter-set:_num_var(--num-assets)] before:content-[counter(num)]"></span>    
+                </h3>
+                <p class="text-center text-md">Lorem ipsum dolor <br>sit amet</p>
+            </div>
+            <div class="grid px-8 py-16 m-2 space-y-16">
+                <h3 class="text-center self-center font-extrabold text-5xl text-accent">
+                    <span class="[counter-set:_num_var(--num-users)] before:content-[counter(num)]"> k</span>    
+                </h3>
+                <p class="text-center text-md">Lorem ipsum dolor <br>sit amet</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col w-[20%]">
+        <h2 class="px-2 mx-2 font-extrabold text-5xl py-2">Mercado autônomo</h2>
+        <p class="text-lg py-4 px-2 mx-2 self-center leading-6">
+            Como o próprio nome sugere, no mercado autônomo o cliente 
+            realiza todas as etapas da compra sem precisar de funcionários, ou seja, 
+            um mercado em casa <strong>disponível 24 horas por dia!</strong>
+        </p>
+        <span class="pt-6 text-center">
+            <a href="" type="button" class="mt-2 py-4 px-6 bg-accent text-base-100 font-bold text-md rounded-full w-fit">Quero no meu condomínio</a>
+        </span>
+    </div>
+
+</section>
+
+<style>
+    @property --num-transactions {
+        syntax: "<integer>";
+        initial-value: 0;
+        inherits: false;
+    }
+
+    @property --num-assets {
+        syntax: "<integer>";
+        initial-value: 0;
+        inherits: false;
+    }
+
+    @property --num-users {
+        syntax: "<integer>";
+        initial-value: 0;
+        inherits: false;
+    }
+
+    @keyframes counter {
+        from {
+            --num-transactions: 0;
+            --num-assets: 0;
+            --num-users: 0;
+        }
+        to {
+            --num-transactions: 8;
+            --num-assets: 100;
+            --num-users: 50;
+        }
+    }
+</style>
+
+<script>
+    window.addEventListener("scroll", function() {
+        const element = document.getElementById("facilityInNumbers"); 
+
+        if (element) {
+            const rect = element.getBoundingClientRect();
+            const isInViewport = (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+
+            let spans = element.getElementsByTagName('span');
+
+            if (isInViewport) {
+                for(let span of spans){
+                    span.classList.add("animate-[counter_2s_ease-out_forwards]"); 
+                }
+            } 
+        }
+    });
+</script>

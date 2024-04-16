@@ -3,17 +3,17 @@ import { Icon } from "astro-icon/components";
 
 ---
 
-<footer class="flex footer px-10 pb-10 bg-base-100 text-neutral justify-center">
-    <nav class="px-10">
+<footer class="flex flex-col lg:flex-row footer px-10 pb-10 bg-base-100 text-neutral justify-center">
+    <nav class="flex flex-col max-lg:items-center max-lg:w-full px-10 ">
       <h6 class="footer-title font-bold">A Facility</h6> 
       <a class="link link-hover" href="#products">Produtos</a>
       <a class="link link-hover" href="#benefits">Benefícios</a>
       <a class="link link-hover" href="#">Nossos clientes</a>
     </nav> 
-    <nav class="px-10 self-center">
+    <nav class="max-lg:hidden px-10 self-center">
       <h6 class="footer-title">Logo here</h6> 
     </nav> 
-    <nav class="px-10">
+    <nav class="flex flex-col max-lg:items-center max-lg:w-full px-10">
         <a class="link link-hover">Contato</a>
         <a class="link link-hover">Seja um licenciado</a>
         <nav class="flex flex-row bg-base-100 justify-center pt-4">

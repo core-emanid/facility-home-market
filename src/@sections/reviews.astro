@@ -1,20 +1,12 @@
 ---
-import Picture from "astro/components/Picture.astro";
 import Image from "astro/components/Image.astro";
 ---
-
-<section class="flex flex-col items-center py-8">
-    <div class="rounded-xl h-60 mx-2 w-3/4 bg-[url('https://w0.peakpx.com/wallpaper/894/146/HD-wallpaper-inside-bar-view-lounge.jpg')] bg-cover bg-center">
-        <span> </span>
-    </div>
-</section>
-
 
 <section class="flex flex-col items-center pt-8 pb-40">
     <h2 class="text-4xl text-center font-bold py-8">Quem tem Facility em casa <br>usa e aprova...</h2>
     
-    <div class="grid grid-cols-3 py-4 font-semibold">
-        <div class="flex flex-col mx-4">
+    <div class="grid grid-cols-1 max-lg:gap-y-12 max-lg:items-center max-lg:items-center max-lg:text-center lg:grid-cols-3 py-4 font-semibold">
+        <div class="flex flex-col items-center mx-4">
             <Image src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
                 class="rounded-xl" loading="lazy" height={250} width={250} alt="picture" />
             <div class="flex flex-col w-80 px-8 align-center">
@@ -27,7 +19,7 @@ import Image from "astro/components/Image.astro";
                 </p>
             </div>
         </div>
-        <div class="flex flex-col mx-4">
+        <div class="flex flex-col items-center mx-4">
             <Image src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
                 class="align-center rounded-xl" loading="lazy"
                 height={250} width={250} alt="picture" />
@@ -41,7 +33,7 @@ import Image from "astro/components/Image.astro";
                 </p>
             </div>
         </div> 
-        <div class="flex flex-col mx-4">
+        <div class="flex flex-col items-center mx-4">
             <Image src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
                 class="align-center rounded-xl" loading="lazy"
                 height={250} width={250} alt="picture" />
@@ -56,5 +48,5 @@ import Image from "astro/components/Image.astro";
             </div>
         </div> 
     </div>
-    <a href="" type="button" class="mt-10 p-2 bg-primary text-base-100 font-bold text-sm rounded-full w-fit">Quero no meu condomínio</a>
+    <a href="" type="button" class="max-lg:my-8 p-2 bg-primary text-base-100 font-bold text-sm rounded-full w-fit">Quero no meu condomínio</a>
 </section>

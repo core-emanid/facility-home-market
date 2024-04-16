@@ -2,13 +2,17 @@
 import Carousel from "../components/carousel.astro";
 ---
 
-<section class="py-6" id="products">
+<section class="pt-24 lg:py-6" id="products">
     <span class="flex justify-center">
-        <h2 class="text-center text-4xl font-extrabold w-[50%] text-neutral">Descubra como a Facility pode 
+        <h2 class="text-center text-4xl font-extrabold lg:w-[50%] text-neutral">Descubra como a Facility pode 
             transformar o seu condomínio!</h2>
     </span>
-    <Carousel />
-    <div class="grid grid-cols-2 text-center text-2xl py-8">
+    
+    <div class="max-lg:py-8">
+        <Carousel />
+    </div>
+    
+    <div class="grid space-y-12 lg:space-y-2 lg:grid-cols-2 text-center text-2xl py-8">
         <span>
             O mix de produtos é personalizado<br>
             de acordo com o consumo!
@@ -18,8 +22,7 @@ import Carousel from "../components/carousel.astro";
             exclusivos de produtos especiais!
         </span>
     </div>
-    <div class="flex w-full justify-center py-8">
-        <a href="" type="button" class="mt-10 p-2 bg-primary text-base-100 font-bold text-sm rounded-full w-fit">Quero no meu condomínio</a>
+    <div class="flex w-full justify-center max-lg:py-8">
+        <a href="" type="button" class="mt-2 py-4 px-6 bg-primary text-base-100 font-bold text-md rounded-full w-fit">Quero no meu condomínio</a>
     </div>
-    
 </section>

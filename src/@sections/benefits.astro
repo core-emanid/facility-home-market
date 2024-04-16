@@ -1,60 +1,36 @@
 ---
 import { Picture } from "astro:assets";
-import Image from "astro/components/Image.astro";
+import Card from "../components/card.astro";
 ---
     
 
-<div class="flex w-fill justify-center py-8 items-center z-90" id="benefits">
-    <span class="text-4xl font-bold px-12">
+<div class="flex flex-col lg:flex-row w-fill justify-center py-8 items-center z-90" id="benefits">
+    <span class="text-4xl font-bold px-12 max-lg:text-center">
         São benefícios para você<br>
         e para o seu condomínio
     </span>
     <!-- TODO: fix border round -->
     <!-- TODO: fix line break sections -->
     <!-- TODO: responsive design -->
-    
-    <Picture src="https://w0.peakpx.com/wallpaper/894/146/HD-wallpaper-inside-bar-view-lounge.jpg" 
-        class="rounded-xl" loading="lazy" height={200} width={600} alt="picture" />
+    <div class="p-8">
+        <Picture src="https://w0.peakpx.com/wallpaper/894/146/HD-wallpaper-inside-bar-view-lounge.jpg" 
+            class="rounded-xl" loading="lazy" height={200} width={600} alt="picture" />
+    </div>
 </div>
 
 <div class="flex flex-col justify-center py-8 items-center">
-    <h2 class="text-4xl font-bold py-4">Tecnologia e Inovação</h2>
-    <div class="grid grid-cols-2 p-8 w-[90%] align-center">
-        <div class="grid text-center justify-center">
-            <h3 class="text-3xl font-bold py-4 w-30">Projeto tecnico personalizado</h3>
-            <Picture src="https://avatars.githubusercontent.com/u/60834135"
-                    class="rounded-xl" loading="lazy"
-                    height={200} width={400} alt="picture" />
+    <h2 class="text-3xl lg:text-4xl font-bold py-4">Tecnologia e Inovação</h2>
+    <div class="flex flex-col p-8 max-lg:space-y-16 lg:flex-row lg:justify-around lg:w-[80%]">
 
-            <div class="flex w-full justify-end">
-                <div class="flex w-60 h-40 rounded-xl bg-accent z-2 mt-[-60px] mr-[-40px] items-center justify-center border-1 border-gray-200 bg-gray-300 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100">
-                    <ul role="group">
-                        <li>
-                            <p class="w-20">
-                                Adaptado para a estrutura do seu condomínio
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="grid text-center justify-center">
-            <h3 class="text-3xl font-bold py-4 w-30">Projeto tecnico personalizado</h3>
-            <Picture src="https://avatars.githubusercontent.com/u/60834135"
-                    class="rounded-xl" loading="lazy"
-                    height={200} width={400} alt="picture" />
+        <Card title="Projeto tecnico personalizado" 
+            imageSrc="https://avatars.githubusercontent.com/u/60834135" 
+            moreInfo={["Pagamento", "Consulta de produtos", "Abrir trava de bebidas +18"]}    
+        />
 
-            <div class="flex w-full justify-end">
-                <div class="flex w-60 h-40 rounded-xl bg-accent z-2 mt-[-60px] mr-[-40px] items-center justify-center border-1 border-gray-200 bg-gray-300 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100">
-                    <ul role="group">
-                        <li>
-                            <p class="w-20 line-clamp-3">
-                                Adaptado para a estrutura do seu condomínio
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <Card title="Projeto tecnico personalizado" 
+            imageSrc="https://avatars.githubusercontent.com/u/60834135" 
+            moreInfo={["Adaptado para a estrutura do seu condomínio"]}    
+        />
+        
     </div>
 </div>

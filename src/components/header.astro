@@ -1,12 +1,13 @@
 ---
-import { Icon } from "../../node_modules/astro-icon/components"
+import { Icon } from "astro-icon/components"
+import Sidebar from "./sidebar.astro"
 ---
 <!-- 
     TODO: set mobile version 
 -->
 
 <header class="flex flex-col w-full align-center">
-    <nav class="flex flex-row bg-primary justify-end pr-20 py-1">
+    <nav class="hidden flex-row bg-primary justify-end pr-20 py-1 sm:flex">
         <a class="rounded-full bg-white p-1 mx-1 text-primary" 
             type="button" href="https://www.instagram.com/facilityhomemarket/" 
             target="_blank">
@@ -24,7 +25,8 @@ import { Icon } from "../../node_modules/astro-icon/components"
             <Icon name={'fa:whatsapp'} size={8} />
         </a>
     </nav>
-    <nav class="flex bg-base-100 py-2 justify-around items-center">
+
+    <nav class="hidden sm:flex bg-base-100 py-2 justify-around items-center">
         <div class="mx-5">IconeX</div>
         <div role="button" class="py-2">
             <a class="border-none text-[#494F4F] px-4 text-center" type="button">A Facility</a>
@@ -38,4 +40,12 @@ import { Icon } from "../../node_modules/astro-icon/components"
            Seja um licenciado
         </a>
     </nav>
+
+    <!-- mobile -->
+
+    <nav class="flex flex-row bg-base-100 py-2 justify-between sm:hidden">
+        <div class="mx-5 self-center">IconeX</div>
+        <Sidebar />
+    </nav>
+
 </header>

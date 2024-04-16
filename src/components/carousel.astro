@@ -9,7 +9,7 @@ import {products} from '../utils/products.json';
     <div class="swiper-wrapper" role="group">
         {
             products.map((product) => (
-                <div class="swiper-slide my-8 text-center" role="group" aria-roledescription="Slide">
+                <div class="swiper-slide my-8" role="group" aria-roledescription="Slide">
                     <Slide title={product}/>
                 </div>
             ))
@@ -17,16 +17,37 @@ import {products} from '../utils/products.json';
     </div>
 </div>
 
+<style>
+    .swiper-slide{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
 <script>
     import Swiper from 'swiper';
 
+    let clientWidth = document.documentElement.clientWidth;
+    let slidesPerView = 4;
+
+    if(clientWidth < 1000){
+        slidesPerView = 2;
+    }
+
+    if(clientWidth < 600){
+        slidesPerView = 1;
+    }
+
     let swiper = new Swiper('.swiper', {
-        speed: 5000,
+        speed: 3000,
         loop: true,
-        slidesPerView: 4,
+        slidesPerView: slidesPerView,
         freeMode: {
-            enabled: true
-        }
+            enabled: false
+        },
+        centeredSlides: true,
+        centeredSlidesBounds: true
     });
 
 

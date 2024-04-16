@@ -6,36 +6,36 @@
     TODO: mobile versions 
 -->
 
-<section class="flex flex-row text-neutral align-center justify-center py-12 space-x-20" id="about" >
+<section class="flex flex-col lg:flex-row text-neutral align-center justify-center lg:py-12 lg:space-x-20" id="about" >
 
     <div class="flex flex-col justify-between">
-        <h2 class="font-extrabold text-5xl text-center">Um ano de impacto positivo <br>na vida das pessoas</h2>
-        <div class="grid grid-cols-3 p-4 gap-0 w-fit" id="facilityInNumbers">
-            <div class="grid px-8 py-16 m-2 space-y-16 w-fit">
+        <h2 class="font-extrabold text-4xl lg:text-5xl text-center max-lg:pt-12 max-lg:bg-base-100">Um ano de impacto positivo <br>na vida das pessoas</h2>
+        <div class="grid grid-cols-1 items-center lg:grid-cols-3 p-4 gap-0 lg:w-fit" id="facilityInNumbers">
+            <div class="grid px-8 py-16 m-2 space-y-8 lg:space-y-16" >
                 <h3 class="text-center self-center font-extrabold text-5xl text-accent">
                     <!-- css func to asc count -->
                     <span class="[counter-set:_num_var(--num-transactions)] before:content-[counter(num)]"></span>    
                 </h3>
-                <p class="text-md text-center">Unidades em <br>funcionamento</p>
+                <p class="text-center text-lg lg:text-md">Unidades em <br>funcionamento</p>
             </div>
-            <div class="grid px-8 py-16 m-2 space-y-16">
+            <div class="grid px-8 py-16 m-2 space-y-8 lg:space-y-16">
                 <h3 class="text-center self-center font-extrabold text-5xl text-accent">
                     <span class="[counter-set:_num_var(--num-assets)] before:content-[counter(num)]"></span>    
                 </h3>
-                <p class="text-center text-md">Lorem ipsum dolor <br>sit amet</p>
+                <p class="text-center text-lg lg:text-md">Lorem ipsum dolor <br>sit amet</p>
             </div>
-            <div class="grid px-8 py-16 m-2 space-y-16">
+            <div class="grid px-8 py-16 m-2 space-y-8 lg:space-y-16">
                 <h3 class="text-center self-center font-extrabold text-5xl text-accent">
                     <span class="[counter-set:_num_var(--num-users)] before:content-[counter(num)]"> k</span>    
                 </h3>
-                <p class="text-center text-md">Lorem ipsum dolor <br>sit amet</p>
+                <p class="text-center text-lg lg:text-md">Lorem ipsum dolor <br>sit amet</p>
             </div>
         </div>
     </div>
 
-    <div class="flex flex-col w-[20%]">
-        <h2 class="px-2 mx-2 font-extrabold text-5xl py-2">Mercado autônomo</h2>
-        <p class="text-lg py-4 px-2 mx-2 self-center leading-6">
+    <div class="flex flex-col items-center text-center lg:w-[20%]">
+        <h2 class="px-2 lg:mx-2 font-extrabold text-5xl py-2">Mercado autônomo</h2>
+        <p class="text-lg py-4 px-2 max-lg:w-[80%] lg:mx-2 leading-6">
             Como o próprio nome sugere, no mercado autônomo o cliente 
             realiza todas as etapas da compra sem precisar de funcionários, ou seja, 
             um mercado em casa <strong>disponível 24 horas por dia!</strong>

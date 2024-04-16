@@ -1,19 +1,35 @@
 ---
 import { Image } from "astro:assets"
+
+interface Props {
+    title: string;
+    imageSrc: string;
+    moreInfo?: string[];
+}
+
+const {
+    title,
+    imageSrc,
+    moreInfo
+} = Astro.props;
 ---
 
-<div class="grid text-center justify-center">
-    <h3 class="text-3xl font-bold py-4 w-30">Projeto tecnico personalizado</h3>
-    <Image src="https://avatars.githubusercontent.com/u/60834135"
-            class="rounded-xl" loading="lazy"
+<div class="flex flex-col">
+    <h3 class="text-3xl font-bold py-4 w-30 text-center">{title}</h3>
+    <Image src={imageSrc}
+            class="rounded-xl self-center" loading="lazy"
             height={200} width={400} alt="picture" />
 
-    <div class="flex w-full justify-end">
+    <div class="flex w-full justify-end lg:ml-[-10rem]">
         <div class="flex w-60 h-40 rounded-xl bg-accent z-2 mt-[-60px] mr-[-40px] items-center justify-center border-1 border-gray-200 bg-gray-300 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100">
             <ul role="group">
-                <li>
-                    <p class="w-20 line-clamp-3">Adaptado para a estrutura do seu condomínio</p>
-                </li>
+                {
+                    moreInfo.map((info) => (
+                        <li class="w-[80%] text-center">
+                            <p class="p-2">{info}</p>
+                        </li>
+                    ))
+                }
             </ul>
         </div>
     </div>

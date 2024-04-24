@@ -1,21 +1,25 @@
 ---
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
+import bannerImg from "../images/Banner-inicial.png"
 ---
 
-<main class="flex flex-col-reverse bg-secondary items-center p-4 pb-40 lg:flex-row">
+<main class="flex flex-col-reverse bg-secondary items-center justify-center p-8 pb-40 lg:flex-row">
     <div class="flex flex-row justify-center lg:w-[50%]">
-        <section class="flex flex-col items-center lg:align-center">
-            <h1 class="text-4xl font-bold text-base-100 max-lg:text-center lg:w-[60%]">
-                Praticidade, economia e qualidade de vida para você e para sua família!
-            </h1>
-            <span class="lg:w-[60%]">
-                <a href="https://api.whatsapp.com/send/?phone=5511994961361&text=Oi,%20gostaria%20de%20saber%20mais%20sobre%20ser%20licenciado%20Facility" type="button" class="mt-10 p-2 bg-base-100 text-neutral font-bold text-sm rounded-full w-fit">Quero no meu condomínio</a>
-            </span>
+        <section class="flex flex-col items-end">
+            <div class="w-[85%] text-left">
+                <h1 class="text-5xl font-extrabold text-base-100 max-lg:text-center leading-relaxed">
+                    Praticidade, economia e qualidade de vida para você e para sua família!
+                </h1>
+                <a href="https://api.whatsapp.com/send/?phone=5511994961361&text=Oi,%20gostaria%20de%20saber%20mais%20sobre%20ser%20licenciado%20Facility" type="button" 
+                       class="mt-10 py-6 px-8 bg-base-100 text-neutral font-bold text-sm lg:text-lg rounded-full w-fit">
+                       Quero no meu condomínio
+                </a>
+            </div>
         </section>
     </div>
-    <Picture loading='lazy' src="https://breed-assets.wisdompanel.com/cat/domestic-cat-finland/European_Domestic.png"
-            height={500} width={500} format="png"
-            class="m-6 border-black border-1 rounded-2xl max-sm:max-w-[80%]"
+    <Image loading='lazy' src={bannerImg}
+            height={600} width={600} format="png"
+            class="m-6 border-black border-1 rounded-full max-sm:max-w-[60%]"
             aria-label="Rafael picture" alt="my profile picture" />
 
 </main>

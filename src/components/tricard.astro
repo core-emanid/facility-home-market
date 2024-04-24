@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+    title: string;
+    imageSrc1: ImageMetadata;
+    imageSrc2: ImageMetadata;
+    imageSrc3: ImageMetadata;
+    subtitle1: string;
+    subtitle2: string;
+    subtitle3: string;
+}
+
+const { title, 
+    imageSrc1, 
+    imageSrc2, 
+    imageSrc3,
+    subtitle1,
+    subtitle2,
+    subtitle3,
+} = Astro.props;
+---
+
+<h2 class="text-4xl lg:text-6xl font-extrabold py-4">{title}</h2>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 py-20 lg:gap-x-9 w-[80%] text-xl font-bold">
+    <div class="grid text-center mx-4">
+        <div class="flex justify-center">
+            <Image
+                src={imageSrc1}
+                class="rounded-xl justify-center"
+                loading="lazy"
+                height={200}
+                width={200}
+                alt="picture"
+            />
+        </div>
+        <span class="w-full flex justify-center pt-4">
+            <h3 class="w-[50%]">{subtitle1}</h3>
+        </span>    
+    </div>
+    <div class="grid text-center mx-4">
+        <div class="flex justify-center">
+            <Image
+                src={imageSrc2}
+                class="rounded-xl"
+                loading="lazy"
+                height={200}
+                width={200}
+                alt="picture"
+            />
+        </div>
+        <span class="w-full flex justify-center pt-4">
+            <h3 class="w-[70%]">{subtitle2}</h3>
+        </span> 
+    </div>
+    <div class="grid text-center mx-4">
+        <div class="flex justify-center pt-4">
+            <Image
+                src={imageSrc3}
+                class="rounded-xl"
+                loading="lazy"
+                height={200}
+                width={200}
+                alt="picture"
+            />
+        </div>
+        <span class="w-full flex justify-center pt-4">
+            <h3 class="w-[50%]">{subtitle3}</h3>
+        </span> 
+    </div>
+</div> 

@@ -1,76 +1,41 @@
 ---
-import Image from "astro/components/Image.astro"
-import { Picture } from "astro:assets"
+import Image from "astro/components/Image.astro";
+import TriCard from "../components/tricard.astro";
+import custoImg1 from "../images/1a-sem-custo-de-implantacao.png";
+import custoImg2 from "../images/1b-Limpeza-reposicao-e-controle-de-estoque.png";
+import custoImg3 from "../images/1c-atendimento-online-ao-cliente.png";
+import segurancaImg1 from "../images/2a-Monitoramento-com-cameras.png";
+import segurancaImg2 from "../images/2b-Equipe-autorizada-e-uniformizada.png";
+import segurancaImg3 from "../images/2c-Seguro-de-responsabilidade-civil.png";
+import economiaImg1 from "../images/3a-cashback.png";
+import economiaImg2 from "../images/3b-valorizacao.png";
 ---
 
 <div class="flex flex-col items-center">
-    <h2 class="text-4xl text-center font-bold py-8">Facilidade e economia</h2>
-    <div class="grid grid-cols-1 max-lg:gap-y-10 lg:grid-cols-3 py-4 lg:gap-x-9 font-semibold">
-        <div class="grid text-center mx-4">
-            <Picture src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                class="rounded-xl" loading="lazy"
-                height={250} width={250} alt="picture" />
-            <h3 class="py-4">
-                Sem custo de implantação
-            </h3>
-        </div>
-        <div class="grid text-center mx-4">
-            <Picture src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                class="rounded-xl" loading="lazy"
-                height={250} width={250} alt="picture" />
-            <h3 class="py-4">
-                Limpeza, reposição <br>
-                e controle de estoque
-            </h3>
-        </div>
-        <div class="grid text-center mx-4">
-            <Picture src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                class="rounded-xl" loading="lazy"
-                height={250} width={250} alt="picture" />
-            <h3 class="py-4">
-                Atendimento online <br>ao cliente
-            </h3>
-        </div>
-    </div>
+    <TriCard imageSrc1={custoImg1} imageSrc2={custoImg2} imageSrc3={custoImg3}
+        title="Facilidade e economia"
+        subtitle1="Sem custo de implantação" 
+        subtitle2="Limpeza, reposição e controle de estoque" 
+        subtitle3="Atendimento online ao cliente"
+    />
 </div>
 
 <div class="flex flex-col items-center">
-    <h2 class="text-4xl text-center font-bold py-8">Segurança e Tranquilidade</h2>
-    <div class="grid grid-cols-1 max-lg:gap-y-10 lg:grid-cols-3 py-4 lg:gap-x-9 font-semibold">
-        <div class="grid text-center mx-4">
-            <Picture src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                class="rounded-xl" loading="lazy"
-                height={250} width={250} alt="picture" />
-            <h3 class="py-4">
-                Sem custo de implantação
-            </h3>
-        </div>
-        <div class="grid text-center mx-4">
-            <Picture src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                class="rounded-xl" loading="lazy"
-                height={250} width={250} alt="picture" />
-            <h3 class="py-4">
-                Limpeza, reposição <br>
-                e controle de estoque
-            </h3>
-        </div>
-        <div class="grid text-center mx-4">
-            <Picture src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                class="rounded-xl" loading="lazy"
-                height={250} width={250} alt="picture" />
-            <h3 class="py-4">
-                Atendimento online <br>ao cliente
-            </h3>
-        </div>
-    </div>
+    <TriCard imageSrc1={segurancaImg1} imageSrc2={segurancaImg2} imageSrc3={segurancaImg3}
+        title="Segurança e tranquilidade"
+        subtitle1="Monitoramento com câmeras" 
+        subtitle2="Equipe autorizada e uniformizada" 
+        subtitle3="Seguro de Responsabilidade Civil"
+    />
 </div>
 
 <div class="flex flex-col items-center py-8">
-    <h2 class="text-4xl text-center font-bold py-8">E tem mais economia!</h2>
-    <div class="grid grid-cols-1 max-lg:gap-y-10 lg:grid-cols-2 py-4 lg:gap-x-9 font-semibold">
+    <h2 class="text-4xl lg:text-6xl font-extrabold py-4">E tem mais economia!</h2>
+
+    <div class="grid grid-cols-1 max-lg:gap-y-10 lg:grid-cols-2 pt-24  lg:gap-x-9 font-semibold">
         <div class="flex flex-col max-lg:text-center max-lg:items-center lg:flex-row mx-4">
-            <Image src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                class="rounded-xl" loading="lazy" height={250} width={250} alt="picture" />
+            <Image src={economiaImg1}
+                class="rounded-xl" loading="lazy" height={200} width={200} alt="picture" />
             <div class="flex flex-col w-80 px-8 align-center">
                 <h3 class="py-4 text-2xl font-bold">
                     Cashback para o condomínio
@@ -82,8 +47,8 @@ import { Picture } from "astro:assets"
             </div>
         </div>
         <div class="flex flex-col max-lg:text-center max-lg:items-center lg:flex-row mx-4">
-            <Image src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                class="rounded-xl" loading="lazy" height={250} width={250} alt="picture" />
+            <Image src={economiaImg2}
+                class="rounded-xl" loading="lazy" height={200} width={200} alt="picture" />
             <div class="flex flex-col w-80 px-8 align-center">
                 <h3 class="py-4 text-2xl font-bold">
                     Valorização do seu imóvel
@@ -95,5 +60,7 @@ import { Picture } from "astro:assets"
             </div>
         </div>
     </div>
-    <a href="" type="button" class="mt-10 p-2 bg-accent text-base-100 font-bold text-sm rounded-full w-fit">Quero no meu condomínio</a>
+    <a href="#" type="button" 
+    class="mt-10 py-6 px-8 bg-accent text-base-100 font-bold text-sm lg:text-lg rounded-full w-fit">Quero no meu condomínio</a>
 </div>
+

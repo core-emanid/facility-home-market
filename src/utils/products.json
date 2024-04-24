@@ -1,16 +1,59 @@
 {
     "products": [
-        "Bomboniere",
-        "Congelados", 
-        "Sorvetes",
-        "Saudável", 
-        "Higiene", 
-        "Alcoólicos", 
-        "Adega", 
-        "Não alcoólicos",
-        "Snacks",
-        "Refrigerados", 
-        "Churrasco", 
-        "Sempre com novidades"
+        {
+            "title": "Bomboniere",
+            "imageUrl": "bomboniere",
+            "description": ""
+        },
+        {
+            "title": "Congelados",
+            "imageUrl": "congelado",
+            "description": ""
+        },
+        {
+            "title": "Sorvetes",
+            "imageUrl": "sorvetes",
+            "description": ""
+        },
+        {
+            "title": "Saudável",
+            "imageUrl": "saudavel",
+            "description": ""
+        },
+        {
+            "title": "Higiene",
+            "imageUrl": "higiene",
+            "description": ""
+        },
+        {
+            "title": "Alcoólicos",
+            "imageUrl": "alcoolicos",
+            "description": ""
+        },
+        {
+            "title": "Adega",
+            "imageUrl": "adega",
+            "description": ""
+        },
+        {
+            "title": "Não alcoólicos",
+            "imageUrl": "naoAlcoolicos",
+            "description": ""
+        },
+        {
+            "title": "Snacks",
+            "imageUrl": "snacks",
+            "description": ""
+        },
+        {
+            "title": "Refrigerados",
+            "imageUrl": "refrigerados",
+            "description": ""
+        },
+        {
+            "title": "Churrasco",
+            "imageUrl": "churrasco",
+            "description": ""
+        }
     ]
 }

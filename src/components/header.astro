@@ -1,6 +1,8 @@
 ---
 import { Icon } from "astro-icon/components"
 import Sidebar from "./sidebar.astro"
+import {Image} from "astro:assets";
+import logo from "../images/logo-facility-home-market-header.svg";
 ---
 <!-- 
     TODO: set mobile version 
@@ -26,8 +28,10 @@ import Sidebar from "./sidebar.astro"
         </a>
     </nav>
 
-    <nav class="hidden sm:flex bg-base-100 py-2 justify-around items-center">
-        <div class="mx-5">IconeX</div>
+    <nav class="hidden sm:flex bg-base-100 py-4 justify-around items-center">
+        <div class="mx-5">
+            <Image src={logo} height={200} width={200} alt="imagem" loading="lazy" />
+        </div>
         <div role="button" class="py-2">
             <a class="border-none text-[#494F4F] px-4 text-center" type="button">A Facility</a>
             <a class="border-none text-[#494F4F] px-4 text-center" type="button">Produtos</a>
@@ -36,7 +40,7 @@ import Sidebar from "./sidebar.astro"
             <a class="border-none text-[#494F4F] px-4 text-center" type="button">Contato</a>
         </div>
         <a href="https://api.whatsapp.com/send/?phone=5511994961361&text=Oi,%20gostaria%20de%20saber%20mais%20sobre%20ser%20licenciado%20Facility" 
-           type="button" class="border-none text-base-100 rounded-full bg-secondary px-4 py-1 font-bold">
+           type="button" class="border-none text-base-100 rounded-full bg-secondary px-5 py-2 text-lg font-semibold">
            Seja um licenciado
         </a>
     </nav>
@@ -44,7 +48,9 @@ import Sidebar from "./sidebar.astro"
     <!-- mobile -->
 
     <nav class="flex flex-row bg-base-100 py-2 justify-between sm:hidden">
-        <div class="mx-5 self-center">IconeX</div>
+        <div class="mx-5 self-center">
+            <Image src={logo} height={200} width={200} alt="imagem" loading="lazy"/>
+        </div>
         <Sidebar />
     </nav>
 

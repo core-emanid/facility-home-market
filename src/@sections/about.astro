@@ -1,48 +1,54 @@
 ---
 ---
 
-<!-- 
-    TODO: link call to action  
-    TODO: mobile versions 
--->
-
-<section class="flex flex-col lg:flex-row text-neutral align-center justify-center lg:py-12 lg:space-x-20" id="about" >
+<section class="flex flex-col lg:flex-row text-neutral align-center justify-center p-8 bg-base-100" id="about" >
 
     <div class="flex flex-col justify-between">
-        <h2 class="font-extrabold text-4xl lg:text-5xl text-center max-lg:pt-12 max-lg:bg-base-100">Um ano de impacto positivo <br>na vida das pessoas</h2>
-        <div class="grid grid-cols-1 items-center lg:grid-cols-3 p-4 gap-0 lg:w-fit" id="facilityInNumbers">
-            <div class="grid px-8 py-16 m-2 space-y-8 lg:space-y-16" >
-                <h3 class="text-center self-center font-extrabold text-5xl text-accent">
-                    <!-- css func to asc count -->
-                    <span class="[counter-set:_num_var(--num-transactions)] before:content-[counter(num)]"></span>    
-                </h3>
-                <p class="text-center text-lg lg:text-md">Unidades em <br>funcionamento</p>
+
+        <div class="flex flex-col items-center p-4 text-pretty">
+            <h2 class="font-extrabold text-4xl lg:text-5xl text-center max-lg:pt-12 max-lg:bg-base-100">Um ano de impacto positivo <br>na vida das pessoas</h2>
+           
+            <div class="flex flex-col align-center lg:flex-row p-4 w-[80%]" id="facilityInNumbers">
+                <div class="px-8 py-16 m-2 space-y-8" >
+                    <h3 class="text-center self-center font-extrabold text-8xl text-accent">
+                        <!-- css func to asc count -->
+                        <span class="[counter-set:_num_var(--num-transactions)] before:content-[counter(num)]"></span>    
+                    </h3>
+                    <p class="text-center text-lg lg:text-md">Unidades em funcionamento</p>
+                </div>
+                <div class="px-8 py-16 m-2 space-y-8">
+                    <h3 class="text-center self-center font-extrabold text-8xl text-accent">
+                        -<span class="[counter-set:_num_var(--num-assets)] before:content-[counter(num)]"></span>    
+                    </h3>
+                    <p class="text-center text-lg lg:text-md">Toneladas de CO2 
+                        não foram emitidas</p>
+                </div>
+                <div class="px-8 py-16 m-2 space-y-8">
+                    <h3 class="text-center self-center font-extrabold text-8xl text-accent">
+                        <span class="[counter-set:_num_var(--num-users)] before:content-[counter(num)] text-nowrap"> k</span>    
+                    </h3>
+                    <p class="text-center text-lg lg:text-md">Compras realizadas 
+                        em um ano</p>
+                </div>
             </div>
-            <div class="grid px-8 py-16 m-2 space-y-8 lg:space-y-16">
-                <h3 class="text-center self-center font-extrabold text-5xl text-accent">
-                    <span class="[counter-set:_num_var(--num-assets)] before:content-[counter(num)]"></span>    
-                </h3>
-                <p class="text-center text-lg lg:text-md">Lorem ipsum dolor <br>sit amet</p>
-            </div>
-            <div class="grid px-8 py-16 m-2 space-y-8 lg:space-y-16">
-                <h3 class="text-center self-center font-extrabold text-5xl text-accent">
-                    <span class="[counter-set:_num_var(--num-users)] before:content-[counter(num)]"> k</span>    
-                </h3>
-                <p class="text-center text-lg lg:text-md">Lorem ipsum dolor <br>sit amet</p>
-            </div>
+
         </div>
+
     </div>
 
-    <div class="flex flex-col items-center text-center lg:w-[20%]">
-        <h2 class="px-2 lg:mx-2 font-extrabold text-5xl py-2">Mercado autônomo</h2>
-        <p class="text-lg py-4 px-2 max-lg:w-[80%] lg:mx-2 leading-6">
-            Como o próprio nome sugere, no mercado autônomo o cliente 
-            realiza todas as etapas da compra sem precisar de funcionários, ou seja, 
-            um mercado em casa <strong>disponível 24 horas por dia!</strong>
-        </p>
-        <span class="pt-6 text-center">
-            <a href="" type="button" class="mt-2 py-4 px-6 bg-accent text-base-100 font-bold text-md rounded-full w-fit">Quero no meu condomínio</a>
-        </span>
+    <div class="flex flex-col items-center text-left lg:w-[30%]">
+        <div class="w-[85%]">
+            <h2 class="px-2 lg:mx-2 font-extrabold text-5xl py-2 leading-normal">Mercado autônomo</h2>
+            <p class="text-lg py-6 px-2 w-[80%] lg:mx-2 leading-6">
+                Como o próprio nome sugere, no mercado autônomo o cliente 
+                realiza todas as etapas da compra sem precisar de funcionários, ou seja, 
+                um mercado em casa <strong>disponível 24 horas</strong> por dia!
+            </p>
+            <span class="pt-6 text-center">
+                <a href="#" type="button" 
+                class="mt-10 py-6 px-8 bg-accent text-base-100 font-bold text-sm lg:text-lg rounded-full w-fit">Quero no meu condomínio</a>
+            </span>
+        </div>
     </div>
 
 </section>
@@ -74,8 +80,8 @@
         }
         to {
             --num-transactions: 8;
-            --num-assets: 100;
-            --num-users: 50;
+            --num-assets: 23;
+            --num-users: 20;
         }
     }
 </style>

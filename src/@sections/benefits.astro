@@ -1,36 +1,67 @@
 ---
-import { Picture } from "astro:assets";
-import Card from "../components/card.astro";
+import { Image } from "astro:assets";
+import basketImg from "../images/Sao-beneficios-para-voce-e-para-o-seu-condominio.png";
+import cellphoneImg from "../images/App-exclusivo.png";
+import insideImg from "../images/Adaptado-para-a-estrutura-do-seu-condominio.png";
+
 ---
-    
+
 
 <div class="flex flex-col lg:flex-row w-fill justify-center py-8 items-center z-90" id="benefits">
-    <span class="text-4xl font-bold px-12 max-lg:text-center">
-        São benefícios para você<br>
-        e para o seu condomínio
+    <span class="text-6xl font-extrabold px-12 text-left">
+        São benefícios para<br> você
+        e para o <br> seu condomínio
     </span>
-    <!-- TODO: fix border round -->
-    <!-- TODO: fix line break sections -->
-    <!-- TODO: responsive design -->
+    
     <div class="p-8">
-        <Picture src="https://w0.peakpx.com/wallpaper/894/146/HD-wallpaper-inside-bar-view-lounge.jpg" 
-            class="rounded-xl" loading="lazy" height={200} width={600} alt="picture" />
+        <Image src={basketImg} width={600} class="rounded-xl" loading="lazy" alt="picture" />
     </div>
 </div>
 
 <div class="flex flex-col justify-center py-8 items-center">
-    <h2 class="text-3xl lg:text-4xl font-bold py-4">Tecnologia e Inovação</h2>
+    <h2 class="text-4xl lg:text-6xl font-extrabold py-4">Tecnologia e Inovação</h2>
     <div class="flex flex-col p-8 max-lg:space-y-16 lg:flex-row lg:justify-around lg:w-[80%]">
 
-        <Card title="Projeto tecnico personalizado" 
+        <!-- <Card title="Aplicativo exclusivo" 
             imageSrc="https://avatars.githubusercontent.com/u/60834135" 
-            moreInfo={["Pagamento", "Consulta de produtos", "Abrir trava de bebidas +18"]}    
-        />
+            moreInfo={}    
+        /> -->
 
-        <Card title="Projeto tecnico personalizado" 
-            imageSrc="https://avatars.githubusercontent.com/u/60834135" 
-            moreInfo={["Adaptado para a estrutura do seu condomínio"]}    
-        />
+        <div class="flex flex-col max-lg:p-4">
+            <h3 class="text-3xl font-bold py-4 w-30 text-center">Aplicativo exclusivo</h3>
+            <Image src={cellphoneImg} class="rounded-xl self-center" loading="lazy"
+                    height={200} width={400} alt="picture" />
+        
+            <div class="flex flex-row w-full justify-end text-sm lg:text-lg">
+                <div class="flex min-h-[15%] max-w-[75%] px-8 py-4 rounded-2xl bg-accent z-2 mt-[-60px] lg:mt-[-120px] mr-[-20px] lg:mr-[-140px] items-center justify-center border-1 border-gray-200 bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70 border border-gray-100">
+                    <ul role="group">
+                        {
+                            ["Pagamento", "Consulta de produtos", "Abrir trava de bebidas +18"].map((subtitle) => (
+                                <li class="">
+                                    <p class="p-2">{subtitle}</p>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col max-lg:p-4">
+            <h3 class="text-3xl font-bold py-4 w-30 text-center">Projeto tecnico <br>personalizado</h3>
+            <Image src={insideImg} class="rounded-xl self-center" loading="lazy"
+                    height={200} width={400} alt="picture" />
+        
+            <div class="flex flex-row w-full justify-end">
+                <div class="flex min-h-[15%] max-w-[75%] px-8 py-4 rounded-xl bg-accent z-2 mt-[-60px] lg:mt-[-120px] mr-[-20px] lg:mr-[-140px] items-center justify-center border-1 border-gray-200 bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70 border border-gray-100">
+                    <ul role="group">
+                        <li class="">
+                            <p class="p-2">Adaptado para a estrutura do seu condomínio</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         
     </div>
 </div>

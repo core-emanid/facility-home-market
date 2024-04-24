@@ -1,12 +1,17 @@
 ---
+import { Picture } from "astro:assets";
+
 const {
-    title
+    title,
+    imageUrl,
+    description
 } = Astro.props;
 ---
 
-<div class="card w-60 shadow-xl rounded-xl">
-    <figure class="px-4 pt-4">
-      <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
-    </figure>
-    <h2 class="text-center py-6">{title}</h2>
+<div class="card w-fit shadow-xl rounded-xl p-4">
+    <Picture loading='lazy' src={imageUrl}
+              height={200} width={200} format="jpg"
+              class="rounded-full" aria-label="Rafael picture" alt=`${description}` />
+
+    <h3 class="text-center pt-4 font-extrabold text-lg">{title}</h3>
 </div>

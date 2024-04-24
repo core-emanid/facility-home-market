@@ -1,16 +1,85 @@
 ---
 import 'swiper/css';
 import Slide from '../components/slide.astro';
-import {products} from '../utils/products.json';
+
+import adega from "../images/produtos-Adega.png";
+import alcoolicos from "../images/produtos-Alcoolicos.png";
+import bomboniere from "../images/produtos-Bomboniere.png";
+import churrasco from "../images/produtos-Churrasco.png";
+import congelado from "../images/produtos-Congelados.png";
+import higiene from "../images/produtos-Adega.png";
+import naoAlcoolicos from "../images/produtos-Nao-Alcoolcos.png";
+import refrigerados from "../images/produtos-Refrigerados.png";
+import saudavel from "../images/produtos-Saudavel.png";
+import snacks from "../images/produtos-Snacks.png";
+import sorvetes from "../images/produtos-Sorvetes.png";
+
+const products = [
+        {
+            title: "Bomboniere",
+            imageUrl: bomboniere,
+            description: ""
+        },
+        {
+            title: "Congelados",
+            imageUrl: congelado,
+            description: ""
+        },
+        {
+            title: "Sorvetes",
+            imageUrl: sorvetes,
+            description: ""
+        },
+        {
+            title: "Saudável",
+            imageUrl: saudavel,
+            description: ""
+        },
+        {
+            title: "Higiene",
+            imageUrl: higiene,
+            description: ""
+        },
+        {
+            title: "Alcoólicos",
+            imageUrl: alcoolicos,
+            description: ""
+        },
+        {
+            title: "Adega",
+            imageUrl: adega,
+            description: ""
+        },
+        {
+            title: "Não alcoólicos",
+            imageUrl: naoAlcoolicos,
+            description: ""
+        },
+        {
+            title: "Snacks",
+            imageUrl: snacks,
+            description: ""
+        },
+        {
+            title: "Refrigerados",
+            imageUrl: refrigerados,
+            description: ""
+        },
+        {
+            title: "Churrasco",
+            imageUrl: churrasco,
+            description: ""
+        }
+]
 
 ---
  
 <div class="swiper" role="region" aria-label="carousel">
     <div class="swiper-wrapper" role="group">
         {
-            products.map((product) => (
+            products.map(({title, imageUrl, description}) => (
                 <div class="swiper-slide my-8" role="group" aria-roledescription="Slide">
-                    <Slide title={product}/>
+                    <Slide title={title} imageUrl={imageUrl} description={description} />
                 </div>
             ))
         }

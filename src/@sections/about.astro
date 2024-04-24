@@ -6,7 +6,7 @@
     <div class="flex flex-col justify-between">
 
         <div class="flex flex-col items-center p-4 text-pretty">
-            <h2 class="font-extrabold text-4xl lg:text-5xl text-center max-lg:pt-12 max-lg:bg-base-100">Um ano de impacto positivo <br>na vida das pessoas</h2>
+            <h2 id="title-hook" class="font-extrabold text-4xl lg:text-5xl text-center max-lg:pt-12 max-lg:bg-base-100">Um ano de impacto positivo <br>na vida das pessoas</h2>
            
             <div class="flex flex-col align-center lg:flex-row p-4 w-[80%]" id="facilityInNumbers">
                 <div class="px-8 py-16 m-2 space-y-8" >
@@ -89,9 +89,9 @@
 <script>
     window.addEventListener("scroll", function() {
         const element = document.getElementById("facilityInNumbers"); 
-
-        if (element) {
-            const rect = element.getBoundingClientRect();
+        const titleElement = document.getElementById("title-hook"); 
+        if (titleElement) {
+            const rect = titleElement.getBoundingClientRect();
             const isInViewport = (
                 rect.top >= 0 &&
                 rect.left >= 0 &&

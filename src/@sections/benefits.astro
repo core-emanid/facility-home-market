@@ -16,16 +16,15 @@ import insideImg from "../images/Adaptado-para-a-estrutura-do-seu-condominio.png
     <div class="p-8">
         <Image src={basketImg} width={600} class="rounded-xl" loading="lazy" alt="picture" />
     </div>
+
+    <div class="max-lg:hidden h-[850px] w-[850px] p-8 bg-secondary absolute rounded-full z-[-1] mt-[5%] mr-[-85%]">
+    </div>
+
 </div>
 
 <div class="flex flex-col justify-center py-8 items-center">
     <h2 class="text-4xl lg:text-6xl font-extrabold py-4">Tecnologia e Inovação</h2>
     <div class="flex flex-col p-8 max-lg:space-y-16 lg:flex-row lg:justify-around lg:w-[80%]">
-
-        <!-- <Card title="Aplicativo exclusivo" 
-            imageSrc="https://avatars.githubusercontent.com/u/60834135" 
-            moreInfo={}    
-        /> -->
 
         <div class="flex flex-col max-lg:p-4">
             <h3 class="text-3xl font-bold py-4 w-30 text-center">Aplicativo exclusivo</h3>
@@ -33,12 +32,12 @@ import insideImg from "../images/Adaptado-para-a-estrutura-do-seu-condominio.png
                     height={200} width={400} alt="picture" />
         
             <div class="flex flex-row w-full justify-end text-sm lg:text-lg">
-                <div class="flex min-h-[15%] max-w-[75%] px-8 py-4 rounded-2xl bg-accent z-2 mt-[-60px] lg:mt-[-120px] mr-[-20px] lg:mr-[-140px] items-center justify-center border-1 border-gray-200 bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70 border border-gray-100">
+                <div class="flex min-h-[15%] max-w-[75%] px-8 py-4 rounded-2xl bg-accent z-2 mt-[-60px] lg:mt-[-120px] mr-[-20px] lg:mr-[-140px] items-center justify-center border-1 border-gray-200 bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70 border border-gray-300">
                     <ul role="group">
                         {
                             ["Pagamento", "Consulta de produtos", "Abrir trava de bebidas +18"].map((subtitle) => (
-                                <li class="">
-                                    <p class="p-2">{subtitle}</p>
+                                <li class="font-semibold">
+                                    <p class="p-2 text-nowrap">{subtitle}</p>
                                 </li>
                             ))
                         }
@@ -53,9 +52,9 @@ import insideImg from "../images/Adaptado-para-a-estrutura-do-seu-condominio.png
                     height={200} width={400} alt="picture" />
         
             <div class="flex flex-row w-full justify-end">
-                <div class="flex min-h-[15%] max-w-[75%] px-8 py-4 rounded-xl bg-accent z-2 mt-[-60px] lg:mt-[-120px] mr-[-20px] lg:mr-[-140px] items-center justify-center border-1 border-gray-200 bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70 border border-gray-100">
+                <div class="flex min-h-[15%] max-w-[75%] px-8 py-4 rounded-xl bg-accent z-2 mt-[-60px] lg:mt-[-120px] mr-[-20px] lg:mr-[-140px] items-center justify-center border-1 border-gray-200 bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70 border border-gray-300">
                     <ul role="group">
-                        <li class="">
+                        <li class="font-semibold">
                             <p class="p-2">Adaptado para a estrutura do seu condomínio</p>
                         </li>
                     </ul>

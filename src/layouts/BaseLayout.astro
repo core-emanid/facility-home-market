@@ -30,13 +30,26 @@ import Header from '../components/header.astro';
 	html, body {
 		max-width: 100vw;
 		height: fit-content;
+		overflow-x: hidden;
 	}
 
 	* {
 		font-family: "Open Sans", sans-serif;
   		font-optical-sizing: auto;
 	}
-
+	
+	:root {
+		--primary: "#ff9549";
+		--secondary: "#3cbde5"; 
+		--accent: "#72ad49";	 
+		--neutral: "#494f4f";							 
+		--base-100: "#fff";							 
+		--info: "#008cff";							 
+		--success: "#00c39a";							 
+		--warning: "#ff7600";							 
+		--error: "#ff888c";
+	}
+	
 
 </style>
 
@@ -51,5 +64,7 @@ import Header from '../components/header.astro';
   
 	window.localStorage.setItem("theme", theme);
 	document.querySelector('html').setAttribute('data-theme', theme);
+
+	
 
 </script>

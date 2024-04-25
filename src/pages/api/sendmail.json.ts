@@ -8,6 +8,8 @@ dotenv.config();
 // TODO: perform validation and front feedbacks
 
 export const POST: APIRoute = async ({ request }) => {
+ 
+	const token = localStorage.getItem("token");
 
   if (request.headers.get('Content-Type') === 'application/json') {
     const formData = await request.json();

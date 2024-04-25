@@ -1,6 +1,9 @@
 ---
 import Image from "astro/components/Image.astro";
 import logo from "../images/logo-facility-home-market-footer.svg";
+import Card from "../components/card.astro";
+import avatarPic from "../images/2a-Monitoramento-com-cameras.png";
+import Btn from "../components/cta-button.astro";
 ---
 
 <section class="flex flex-col items-center pt-8 pb-20">
@@ -8,54 +11,44 @@ import logo from "../images/logo-facility-home-market-footer.svg";
     
     <div class="grid grid-cols-1 max-lg:gap-y-12 max-lg:items-center max-lg:items-center max-lg:text-center lg:grid-cols-3 py-4 font-semibold">
         <div class="flex flex-col items-center mx-4">
-            <Image src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                class="rounded-xl" loading="lazy" height={250} width={250} alt="picture" />
-            <div class="flex flex-col w-80 px-8 align-center">
-                <h3 class="py-4 text-2xl font-bold">
-                    Cashback para o condomínio
-                </h3>
-                <p>
-                    Parte do valor retorna para a cobertura 
-                    de custos do condomínio.
-                </p>
-            </div>
+            <Card avatarPic={avatarPic} 
+            name="Ennet Lee" jobTitle="Monitor" 
+            depoiment=`Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. 
+                Phasellus quis volutpat lorem. 
+                Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. 
+                Phasellus quis volutpat lorem.`/>
         </div>
         <div class="flex flex-col items-center mx-4">
-            <Image src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                class="align-center rounded-xl" loading="lazy"
-                height={250} width={250} alt="picture" />
-            <div class="flex flex-col w-80 px-8 align-center">
-                <h3 class="py-4 text-2xl font-bold">
-                    Valorização do seu imóvel
-                </h3>
-                <p>
-                    O mercado autônomo torna o imóvel mais 
-                    atrativo para compradores e inquilinos.
-                </p>
-            </div>
+            <Card avatarPic={avatarPic} 
+            name="Ennet Lee" jobTitle="Monitor" 
+            depoiment=`Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. 
+                Phasellus quis volutpat lorem. 
+                Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. 
+                Phasellus quis volutpat lorem.`/>
         </div> 
         <div class="flex flex-col items-center mx-4">
-            <Image src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                class="align-center rounded-xl" loading="lazy"
-                height={250} width={250} alt="picture" />
-            <div class="flex flex-col w-80 px-8 align-center">
-                <h3 class="py-4 text-2xl font-bold">
-                    Valorização do seu imóvel
-                </h3>
-                <p>
-                    O mercado autônomo torna o imóvel mais 
-                    atrativo para compradores e inquilinos.
-                </p>
-            </div>
+            <Card avatarPic={avatarPic} 
+            name="Ennet Lee" jobTitle="Monitor" 
+            depoiment=`Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. 
+                Phasellus quis volutpat lorem. 
+                Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. 
+                Phasellus quis volutpat lorem.`/>
         </div> 
     </div>
-    <a href="#" type="button" 
-    class="mt-10 py-6 px-8 bg-primary text-base-100 font-bold text-sm lg:text-lg rounded-full w-fit">Quero no meu condomínio</a>
+    <Btn bgColor="#ff9549" textColor="#FFF"/>
 </section>
 
-<div class="flex justify-center mb-[-80px] relative ">
-    <div class="w-fit bg-base-100 py-8 px-12 rounded-full shadow-md">
-        <Image src={logo} loading="lazy"
-            height={100} width={100} alt="picture" />
+<div class="flex justify-center mb-[-80px] lg:relative">
+    <div class="max-lg:relative  max-lg:mb-[40px]">
+        <div class="w-fit bg-base-100 py-8 px-12 rounded-full shadow-md">
+            <Image src={logo} loading="lazy"
+                height={100} width={100} alt="picture" />
+        </div>
     </div>
 </div>

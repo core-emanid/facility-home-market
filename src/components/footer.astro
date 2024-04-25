@@ -4,31 +4,31 @@ import { Image } from "astro:assets";
 import logo from "../images/logo-facility-home-market-header.svg";
 ---
 
-<footer class="flex flex-col lg:flex-row footer px-10 pb-10 bg-base-100 text-neutral justify-center">
-    <nav class="flex flex-col max-lg:items-center max-lg:w-full px-10 ">
+<footer class="flex flex-col lg:flex-row footer px-10 pb-10 bg-base-100 text-neutral justify-center lg:text-lg">
+    <nav class="flex flex-col max-lg:items-center max-lg:w-full px-10 lg:leading-4">
       <h6 class="font-extrabold font-black">A Facility</h6> 
       <a class="link link-hover" href="#products">Produtos</a>
       <a class="link link-hover" href="#benefits">Benefícios</a>
       <a class="link link-hover" href="#">Nossos clientes</a>
     </nav> 
-    <nav class="max-lg:hidden px-10 self-center">
-      <Image src={logo} alt="" width={250}/>
+    <nav class="max-lg:hidden px-[6%] self-center">
+      <Image src={logo} alt="Facility logo" width={250}/>
     </nav> 
-    <nav class="flex flex-col max-lg:items-center max-lg:w-full px-10">
+    <nav class="flex flex-col max-lg:items-center max-lg:w-full px-10 lg:leading-4">
         <a class="link link-hover">Contato</a>
         <a class="link link-hover">Seja um licenciado</a>
-        <nav class="flex flex-row bg-base-100 justify-center pt-4">
-            <a class="rounded-full bg-accent p-1 mx-1 text-base-100" type="button" href="" target="_blank">
-                <Icon name={'fa:instagram'} size={10} />
+        <nav class="flex flex-row bg-base-100 pt-4">
+            <a class="rounded-full bg-accent p-[6%] mx-1 text-base-100" type="button" href="" target="_blank">
+                <Icon name={'fa:instagram'} size={15} />
             </a>
-            <a class="rounded-full bg-accent p-1 mx-1 text-base-100" type="button" href="" target="_blank">
-                <Icon name={'fa:facebook'} size={10} />
+            <a class="rounded-full bg-accent p-[6%] mx-1 text-base-100" type="button" href="" target="_blank">
+                <Icon name={'fa:facebook'} size={15} />
             </a>
-            <a class="rounded-full bg-accent p-1 mx-1 text-base-100" type="button" href="" target="_blank">
-                <Icon name={'fa-regular:envelope'} size={10} />
+            <a class="rounded-full bg-accent p-[6%] mx-1 text-base-100" type="button" href="" target="_blank">
+                <Icon name={'fa-regular:envelope'} size={15} />
             </a>
-            <a class="rounded-full bg-accent p-1 mx-1 text-base-100" type="button" href="" target="_blank">
-                <Icon name={'fa:whatsapp'} size={10} />
+            <a class="rounded-full bg-accent p-[6%] mx-1 text-base-100" type="button" href="" target="_blank">
+                <Icon name={'fa:whatsapp'} size={15} />
             </a>
         </nav>
     </nav>

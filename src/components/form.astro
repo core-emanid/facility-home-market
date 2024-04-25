@@ -3,64 +3,73 @@
 
 <!-- TODO: email validation and api integration -->
 
-<div class="bg-base-100 rounded-xl w-full lg:max-w-[60%]">
-    <h2 class="text-center text-3xl font-bold pt-6">Fale com a Facility!</h2>
+<div class="bg-base-100 rounded-[24px] w-full lg:max-w-[60%] border-black border-1">
+    <h2 class="text-center text-3xl lg:text-5xl font-bold py-10">Fale com a Facility!</h2>
     <form class="p-4 grid grid-cols-1 lg:grid-cols-2">
-        <div class="grid mx-4">
+        <div class="grid mx-4 space-y-2">
             <div class="form-control">
-                <label class="label">
+                <!-- <label class="label">
                   <span class="label-text">Nome</span>
-                </label>
-                <input type="text" placeholder="Nome" id="nome" class="input input-bordered" />
+                </label> -->
+                <input type="text" placeholder="Nome" id="nome" class="input rounded-full shadow-xl placeholder:text-neutral" />
             </div>
             <div class="form-control">
-                <label class="label">
+                <!-- <label class="label">
                   <span class="label-text">Telefone</span>
-                </label>
-                <input type="text" placeholder="Telefone" id="telefone" class="input input-bordered"  />
+                </label> -->
+                <input type="text" placeholder="Telefone" id="telefone" class="input rounded-full shadow-xl placeholder:text-neutral"  />
             </div>
             <div class="form-control">
-                <label class="label">
+                <!-- <label class="label">
                   <span class="label-text">Email</span>
-                </label>
-                <input type="email" placeholder="Email" id="email" class="input input-bordered"  />
+                </label> -->
+                <input type="email" placeholder="Email" id="email" class="input rounded-full shadow-xl placeholder:text-neutral"  />
             </div>    
         </div>
-        <div class="grid mx-4 max-lg:items-center">
+        <div class="grid mx-4 space-y-2 max-lg:items-center">
             <div class="form-control">
-                <label class="label">
+                <!-- <label class="label">
                   <span class="label-text">Cidade</span>
-                </label>
-                <input type="text" placeholder="Cidade" id="cidade" class="input input-bordered"  />
+                </label> -->
+                <input type="text" placeholder="Cidade" id="cidade" class="input rounded-full shadow-xl placeholder:text-neutral"  />
             </div>
             <div class="form-control">
-                <label class="label">
+                <!-- <label class="label">
                   <span class="label-text">Bairro</span>
-                </label>
-                <input type="text" placeholder="Bairro" id="bairro" class="input input-bordered"  />
+                </label> -->
+                <input type="text" placeholder="Bairro" id="bairro" class="input rounded-full shadow-xl placeholder:text-neutral"  />
             </div>
-            <div class="form-control w-fit">
-                <label class="label">
-                    <span class="label-text">Selecione:</span>
-                </label>
-                <select class="select select-bordered w-full max-w-xs" id="categoria">
-                    <option selected>Sou Morador(a)</option>
-                    <option>Sou Síndico(a)</option>
-                    <option>Sou Administrador(a)</option>
-                </select>
+            <div class="form-control w-full">
+                <!-- <label class="label">
+                    <span class="label-text">.</span>
+                </label> -->
+                <span class="flex w-full justify-center">
+                    <select class="select select-bordered max-w-xs shadow-xl placeholder:text-neutral" id="categoria">
+                        <option selected>Sou Morador(a)</option>
+                        <option>Sou Síndico(a)</option>
+                        <option>Sou Administrador(a)</option>
+                    </select>
+                </span>
             </div>
         </div>
     </form>
     <div class="flex w-full justify-center pt-2 pb-6">
-        <button class="btn btn-primary btn-wide bg-accent border-none" onclick="submitForm()">Enviar</button>
+        <button class="btn btn-primary w-[90%] bg-accent border-none rounded-full text-base-100" onclick="submitForm()">Enviar</button>
     </div>
 </div>
 
+
+
 <script is:inline>
 
-    const get = (id) => document.getElementById(id) || { value: '' }
+    const get = (id) => document.getElementById(id) || { value: '' };
 
     const submitForm = () => {
+        // TODO: timestamp logic to avoid flood
+        const token = localStorage.getItem("token");
+        if(token){
+			alert('FUNCIONOU');
+        }		
         saveInput()
         sendmail()
     }

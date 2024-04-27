@@ -12,7 +12,7 @@ module.exports = {
 					"primary": "#ff9549",
 					"secondary": "#3cbde5", 
 					"accent": "#72ad49",	 
-					"neutral": "#494f4f",							 
+					"neutral": "#4b4f4f",							 
 					"base-100": "#fff",							 
 					"info": "#008cff",							 
 					"success": "#00c39a",							 

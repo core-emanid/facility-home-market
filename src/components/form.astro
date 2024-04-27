@@ -8,43 +8,29 @@
     <form class="p-4 grid grid-cols-1 lg:grid-cols-2">
         <div class="grid mx-4 space-y-2">
             <div class="form-control">
-                <!-- <label class="label">
-                  <span class="label-text">Nome</span>
-                </label> -->
                 <input type="text" placeholder="Nome" id="nome" class="input rounded-full shadow-xl placeholder:text-neutral" />
             </div>
             <div class="form-control">
-                <!-- <label class="label">
-                  <span class="label-text">Telefone</span>
-                </label> -->
+                
                 <input type="text" placeholder="Telefone" id="telefone" class="input rounded-full shadow-xl placeholder:text-neutral"  />
             </div>
             <div class="form-control">
-                <!-- <label class="label">
-                  <span class="label-text">Email</span>
-                </label> -->
+                
                 <input type="email" placeholder="Email" id="email" class="input rounded-full shadow-xl placeholder:text-neutral"  />
             </div>    
         </div>
         <div class="grid mx-4 space-y-2 max-lg:items-center">
             <div class="form-control">
-                <!-- <label class="label">
-                  <span class="label-text">Cidade</span>
-                </label> -->
+                
                 <input type="text" placeholder="Cidade" id="cidade" class="input rounded-full shadow-xl placeholder:text-neutral"  />
             </div>
             <div class="form-control">
-                <!-- <label class="label">
-                  <span class="label-text">Bairro</span>
-                </label> -->
+                
                 <input type="text" placeholder="Bairro" id="bairro" class="input rounded-full shadow-xl placeholder:text-neutral"  />
             </div>
             <div class="form-control w-full">
-                <!-- <label class="label">
-                    <span class="label-text">.</span>
-                </label> -->
                 <span class="flex w-full justify-center">
-                    <select class="select select-bordered max-w-xs shadow-xl placeholder:text-neutral" id="categoria">
+                    <select class="select select-bordered max-w-xs shadow-xl placeholder:text-neutral rounded-full" id="categoria">
                         <option selected>Sou Morador(a)</option>
                         <option>Sou Síndico(a)</option>
                         <option>Sou Administrador(a)</option>
@@ -54,7 +40,7 @@
         </div>
     </form>
     <div class="flex w-full justify-center pt-2 pb-6">
-        <button class="btn btn-primary w-[90%] bg-accent border-none rounded-full text-base-100" onclick="submitForm()">Enviar</button>
+        <button class="btn btn-primary w-[90%] bg-accent border-none rounded-full text-base-100 hover:bg-accent" onclick="submitForm()">Enviar</button>
     </div>
 </div>
 
@@ -91,23 +77,11 @@
         localStorage.setItem('contactinfo', JSON.stringify(rest))
     }
 
-    // const retrieveInfo = () => {
-    //     const store = JSON.parse(localStorage.getItem('contactinfo') || '{}')
-    //     get('name').value = store.name || ''
-    //     get('surname').value = store.surname || ''
-    //     get('email').value = store.email || ''
-    //     get('tel').value = store.tel || ''
-    // }
-    // end: localstorage
-
-    // This kicks thing of, should really be on window.onload but...
     const submitBtn = document.querySelector('[type="submit"]');;
     submitBtn?.addEventListener('click', submitForm);
-    // retrieveInfo()
     ;[...document.querySelectorAll('input')][0]?.focus({
         preventScroll: true
     })
-    // window.onload = () => {} // don't know why this wont work
 
     const sendmail = async () => {
         const { 
@@ -133,7 +107,7 @@
             console.log('Error', err)
             throw new Error('Network error.')
         })
-        console.log(data) // Here is the response from backend
+        console.log(data) 
     }
 
 </script>

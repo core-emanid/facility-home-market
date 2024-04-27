@@ -6,10 +6,10 @@ import Btn from "../components/cta-button.astro";
 
     <div class="flex flex-col justify-between">
 
-        <div class="flex flex-col items-center p-4 text-pretty">
+        <div class="flex flex-col items-center p-2 lg:p-4 text-pretty">
             <h2 id="title-hook" class="font-extrabold text-4xl lg:text-5xl text-center max-lg:pt-12 max-lg:bg-base-100">Um ano de impacto positivo <br>na vida das pessoas</h2>
            
-            <div class="flex flex-col align-center lg:flex-row p-4 w-[80%]" id="facilityInNumbers">
+            <div class="flex flex-col align-center items-center lg:flex-row p-4 w-[80%]" id="facilityInNumbers">
                 <div class="px-8 py-16 m-2 space-y-8" >
                     <h3 class="text-center self-center font-extrabold text-8xl text-accent">
                         <!-- css func to asc count -->
@@ -17,19 +17,17 @@ import Btn from "../components/cta-button.astro";
                     </h3>
                     <p class="text-center text-lg lg:text-md">Unidades em funcionamento</p>
                 </div>
-                <div class="px-8 py-16 m-2 space-y-8">
+                <div class="px-8 py-16 m-3 space-y-8 w-fit">
                     <h3 class="text-center self-center font-extrabold text-8xl text-accent">
-                        -<span class="[counter-set:_num_var(--num-assets)] before:content-[counter(num)]"></span>    
+                        <span class="[counter-set:_num_var(--num-assets)] before:content-[counter(num)]"></span>    
                     </h3>
-                    <p class="text-center text-lg lg:text-md">Toneladas de CO2 
-                        não foram emitidas</p>
+                    <p class="text-center text-lg lg:text-md text-nowrap">Toneladas de CO2 <br>não foram emitidas</p>
                 </div>
                 <div class="px-8 py-16 m-2 space-y-8">
                     <h3 class="text-center self-center font-extrabold text-8xl text-accent">
-                        <span class="[counter-set:_num_var(--num-users)] before:content-[counter(num)] text-nowrap"> k</span>    
+                        <span class="[counter-set:_num_var(--num-users)] before:content-[counter(num)] text-nowrap"><span>k</span></span>    
                     </h3>
-                    <p class="text-center text-lg lg:text-md">Compras realizadas 
-                        em um ano</p>
+                    <p class="text-center text-lg lg:text-md">Compras realizadas em um ano</p>
                 </div>
             </div>
 
@@ -38,16 +36,14 @@ import Btn from "../components/cta-button.astro";
     </div>
 
     <div class="flex flex-col items-center text-left lg:w-[30%]">
-        <div class="w-[85%]">
-            <h2 class="px-2 lg:mx-2 font-extrabold text-5xl py-2 leading-normal">Mercado autônomo</h2>
-            <p class="text-lg py-6 px-2 w-[80%] lg:mx-2 leading-6">
+        <div class="flex flex-col items-center lg:w-[85%]">
+            <h2 class="w-full lg:px-2 py-2 font-extrabold text-5xl leading-normal text-nowrap text-center">Mercado <br> autônomo</h2>
+            <p class="text-lg py-6 px-2 text-justify lg:mx-2 lg:w-[80%] leading-6">
                 Como o próprio nome sugere, no mercado autônomo o cliente 
                 realiza todas as etapas da compra sem precisar de funcionários, ou seja, 
                 um mercado em casa <strong>disponível 24 horas</strong> por dia!
             </p>
-            <span class="pt-6 text-center">
-                <Btn bgColor="#72ad49" textColor="#FFF" />
-            </span>
+            <Btn bgColor="#72ad49" textColor="#FFF" />
         </div>
     </div>
 

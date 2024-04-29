@@ -7,7 +7,7 @@ import insideImg from "../images/Adaptado-para-a-estrutura-do-seu-condominio.png
 ---
 
 
-<div class="flex flex-col lg:flex-row w-fill justify-center py-8 items-center z-90 max-lg:px-4" id="benefits">
+<div class="flex flex-col lg:flex-row w-fill justify-center py-8 items-center z-90 max-lg:px-4 " id="benefits">
     <h2 class=" text-3xl text-center lg:text-6xl font-extrabold px-12 lg:text-left">
         São benefícios para<br> você
         e para o <br> seu condomínio
@@ -31,13 +31,13 @@ import insideImg from "../images/Adaptado-para-a-estrutura-do-seu-condominio.png
             <Image src={cellphoneImg} class="rounded-xl self-center" loading="lazy"
                     height={200} width={400} alt="picture" />
         
-            <div class="flex flex-row w-full justify-end text-sm lg:text-lg">
-                <div class="flex min-h-[15%] max-w-[75%] px-8 py-4 rounded-3xl mt-[-60px] lg:mt-[-120px] mr-[-20px] lg:mr-[-140px] items-center justify-center bg-base-100 shadow-xl border-2 border-grey-200">
+            <div class="flex flex-row w-full max-md:pt-4 max-md:items-center md:justify-end">
+                <div class="flex min-h-[15%] max-w-fit md:max-w-[75%] px-8 py-4 rounded-3xl md:mt-[-60px] lg:mt-[-120px] mr-[-20px] lg:mr-[-140px] items-center justify-center bg-base-100 shadow-xl border-2 border-grey-200">
                     <ul role="group">
                         {
                             ["Pagamento", "Consulta de produtos", "Abrir trava de bebidas +18"].map((subtitle) => (
                                 <li class="font-semibold">
-                                    <p class="p-2 text-nowrap">{subtitle}</p>
+                                    <p class="p-2 md:text-nowrap">{subtitle}</p>
                                 </li>
                             ))
                         }
@@ -51,8 +51,8 @@ import insideImg from "../images/Adaptado-para-a-estrutura-do-seu-condominio.png
             <Image src={insideImg} class="rounded-xl self-center" loading="lazy"
                     height={200} width={400} alt="picture" />
         
-            <div class="flex flex-row w-full justify-end">
-                <div class="flex min-h-[15%] bg-base-100 max-w-[75%] px-8 py-4 rounded-3xl shadow-xl border-2 border-grey-200 mt-[-60px] lg:mt-[-120px] mr-[-20px] lg:mr-[-140px] items-center">
+            <div class="flex flex-row w-full max-md:py-8 max-md:items-center md:justify-end">
+                <div class="flex min-h-[15%] bg-base-100 max-w-fit md:max-w-[75%] px-8 py-4 rounded-3xl shadow-xl border-2 border-grey-200 md:mt-[-60px] lg:mt-[-120px] mr-[-20px] lg:mr-[-140px] items-center">
                     <ul role="group">
                         <li class="font-semibold">
                             <p class="p-2">Adaptado para a estrutura do seu condomínio</p>

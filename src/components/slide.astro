@@ -8,10 +8,11 @@ const {
 } = Astro.props;
 ---
 
-<div class="card w-fit shadow-xl rounded-3xl p-4 m-4">
+<div class="card w-fit shadow-xl rounded-3xl p-4 m-4 ">
     <Image loading='lazy' src={imageUrl}
               height={200} width={200} format="png"
-              aria-label="Rafael picture" alt=`${description}` />
+              aria-label="Rafael picture" alt=`${description}`
+    />
 
     <h3 class="text-center pt-4 font-extrabold text-lg">{title}</h3>
 </div>

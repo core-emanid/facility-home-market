@@ -1,16 +1,14 @@
 import type { APIRoute } from 'astro';
 import { transporter as mailTransporter } from '../../config/email/emailConfig';
 import { Form, getEmailDetail, getHtmlTemplate } from '../../utils/mail';
-import * as dotenv from 'dotenv';
 
-dotenv.config();
-
-// TODO: perform validation and front feedbacks
 
 export const POST: APIRoute = async ({ request }) => {
- 
-	const token = localStorage.getItem("token");
 
+  if(request.headers.get('Facility-Key') !== '0425bdfb7df6c8d4e95d2801c6593274') {
+    return new Response(null, { status: 403 });
+  }
+ 
   if (request.headers.get('Content-Type') === 'application/json') {
     const formData = await request.json();
     let form = Object.assign(new Form(), formData) as Form;
@@ -21,6 +19,7 @@ export const POST: APIRoute = async ({ request }) => {
     let mailresult;
     
     try {
+      
       mailresult = await mailTransporter.sendMail(mailDetails)
       
     } catch (error) {

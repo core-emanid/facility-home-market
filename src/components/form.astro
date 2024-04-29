@@ -1,7 +1,6 @@
 ---
 ---
 
-
 <div class="bg-base-100 rounded-[24px] w-full lg:max-w-[60%] border-black border-1">
     <h2 class="text-center text-3xl lg:text-5xl font-bold py-8 lg:py-10">Fale com a Facility!</h2>
     <form class="p-4 grid grid-cols-1 max-lg:space-y-8 lg:grid-cols-2">
@@ -20,16 +19,14 @@
         </div>
         <div class="grid mx-4 space-y-8 lg:space-y-2 max-lg:items-center">
             <div class="form-control">
-                
                 <input type="text" placeholder="Cidade" id="cidade" class="input rounded-full shadow-xl placeholder:text-neutral"  />
             </div>
             <div class="form-control">
-                
                 <input type="text" placeholder="Bairro" id="bairro" class="input rounded-full shadow-xl placeholder:text-neutral"  />
             </div>
-            <div class="form-control w-full">
-                <span class="flex w-full justify-center">
-                    <select class="select select-bordered max-w-xs shadow-xl placeholder:text-neutral rounded-full" id="categoria">
+            <div class="form-control">
+                <span class="flex justify-center">
+                    <select class="select select-bordered shadow-xl placeholder:text-neutral rounded-full w-full" id="categoria">
                         <option selected>Sou Morador(a)</option>
                         <option>Sou Síndico(a)</option>
                         <option>Sou Administrador(a)</option>
@@ -43,7 +40,7 @@
     </div>
 </div>
 
-<div id="toastContainer" class="toast max-lg:toast-center toast-top w-full lg:toast-bottom lg:toast-right lg:w-[50%] z-[9]">
+<div id="toastContainer" class=" hidden toast max-lg:toast-center toast-top w-fit lg:toast-bottom lg:toast-right z-[9]">
 </div>
 
 <script is:inline>
@@ -65,7 +62,7 @@
         if(token){
             let today = new Date().getDay();
             if(Number(token.lastSend) === today){
-                showToast('Um formulário já foi enviado hoje, tente novamente amanhã', true);
+                showToast('Um formulário já foi enviado hoje', true);
             }else{
                 sendmail();
             }
@@ -83,8 +80,6 @@
         store.cidade = get('cidade')?.value
         store.bairro = get('bairro')?.value
         store.categoria = get('categoria')?.value
-
-        // TODO: validar formulário
         return store
     }
 
@@ -93,8 +88,6 @@
     ;[...document.querySelectorAll('input')][0]?.focus({
         preventScroll: true
     })
-
-    
 
     const showToast = (message, isError) => {
 
@@ -111,8 +104,10 @@
         
         toast.append(toastMessage);
         toastContainer.append(toast);
+        toastContainer.classList.remove('hidden');
 
         setTimeout(() => {
+            toastContainer.classList.add('hidden');
             toast.remove();
         }, 5000);
     }
@@ -132,8 +127,8 @@
         } = getFormData();
 
         if(!nome || !email || !telefone){
-            showToast('os campos nome, email e telefone são obrigatórios', true);
-            throw new Error('os campos nome, email e telefone são obrigatórios');
+            showToast('nome, email e telefone são obrigatórios', true);
+            throw new Error('nome, email e telefone são obrigatórios');
         }
 
         if(nome.length < 4){

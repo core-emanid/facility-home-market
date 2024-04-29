@@ -243,7 +243,7 @@ export const googleApiKey = import.meta.env.GOOGLE_API_KEY;
 
         // creating map structure and ui config
         map = new Map(document.getElementById('map'),{
-                zoom: 13,
+                zoom: 15,
                 center: locations[0],
                 mapId: 'DEMO_MAP_ID',
                 mapTypeId: 'roadmap',
@@ -265,7 +265,7 @@ export const googleApiKey = import.meta.env.GOOGLE_API_KEY;
         for(let location of locations){
 
             let icon = document.createElement("img");
-            icon.width = 70;
+            icon.width = 65;
             icon.style = "border-radius: 100%; box-shadow: 0 0 2px 2px lightblue;";
             icon.src = "https://f005.backblazeb2.com/file/debbuggers/Icone-mapa-Facility.png";
 

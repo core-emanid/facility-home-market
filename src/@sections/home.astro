@@ -2,25 +2,61 @@
 import { Image } from "astro:assets";
 import bannerImg from "../images/Banner-inicial.png"
 import Btn from "../components/cta-button.astro";
+import logo from "../images/logo-facility-home-market-footer.svg";
 ---
-
+<!-- TODO: REFACTOR -->
 <main class="flex flex-col-reverse bg-secondary items-center justify-center py-12 max-lg:min-h-fit lg:p-8 lg:pb-40 lg:flex-row">
-    <div class="flex flex-row justify-cente lg:w-[50%]">
-        <section class="flex flex-col items-end pb-[40%] h-fit lg:p-0">
-            <div class="flex flex-col items-center text-left lg:p-0 lg:block lg:w-[85%]">
-                <h1 class="text-3xl lg:text-5xl pb-8 font-extrabold text-base-100 max-lg:text-center leading-relaxed">
-                    Praticidade, economia <br>e qualidade de vida <br>para você e para sua família!
-                </h1>
-               
-                <Btn bgColor="#FFF" textColor="#494f4f" />
-                
-            </div>
-        </section>
-    </div>
-    <div class="w-fit m-6 flex flex-col max-lg:items-center">
-        <Image loading='lazy' src={bannerImg}
-            width={600} format="png"
+    
+    
+    <section class="flex flex-row max-md:min-h-[50vh]">
+        <div class="flex flex-col items-center text-left lg:p-0 lg:block lg:w-[85%]">
+            <span class="flex flex-col text-3xl md:text-4xl lg:text-5xl lg:mb-20 font-extrabold text-base-100 max-lg:text-center lg:space-y-5 lg:text-nowrap">
+                <p>Praticidade, economia</p>
+                <p>e qualidade de vida</p>
+                <p>para você e para sua família!</p>
+            </span>
+            <Btn bgColor="#FFF" textColor="#494f4f"/>
+        </div>
+    </section>
+    
+
+    <section class="flex flex-col w-fit m-6 max-lg:items-center">
+        <!-- <Image loading='lazy' src={bannerImg}
+            width={650} format="png"
             class="border-black border-1 rounded-full max-sm:max-w-[60%]"
-            aria-label="Rafael picture" alt="my profile picture" />
-    </div>
+            aria-label="Rafael picture" alt="my profile picture" /> -->
+        <div class="grid grid-cols-4 grid-rows-4 w-[300px] h-[300px] lg:w-[650px] lg:h-[650px] rounded-full bg-home bg-cover max-sm:py-8">
+            
+            <div class="bg-base-100 h-fit w-fit py-2 px-3 rounded-full self-end justify-self-end">
+                <Image src={logo} width={40} alt="test"/>
+            </div>
+            
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul role="group" class="text-sm md:text-md lg:text-lg font-bold space-y-4 self-center lg:self-end mb-[20px]">
+                <li class="w-fit rounded-full bg-base-100">
+                    <p class="px-3 py-2 lg:py-4 lg:px-6 text-nowrap">24 horas</p>
+                </li>
+                <li class="w-fit rounded-full bg-base-100 ml-2">
+                    <p class="px-3 py-2 lg:py-4 lg:px-6 text-nowrap">Rápido e fácil</p>
+                </li>
+                <li class="w-fit rounded-full bg-base-100 ml-4">
+                    <p class="px-3 py-2 lg:py-4 lg:px-6 text-nowrap">Sem filas e sem sair de casa</p>
+                </li>
+            </ul>
+        </div>
+
+    </section>
 </main>

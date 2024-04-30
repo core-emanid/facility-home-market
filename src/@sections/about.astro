@@ -13,25 +13,21 @@ import Btn from "../components/cta-button.astro";
                 
                 <div class="px-8 py-16 m-2 space-y-8" >
                     <h3 class="text-center self-center font-extrabold text-8xl text-accent">
-                        <!-- css func to asc count -->
-                        <!-- <span class="[counter-set:_num_var(--num-transactions)] before:content-[counter(num)]"></span>     -->
-                        <span class="counter">0</span>
+                        <span>0</span>
                     </h3>
                     <p class="text-center text-lg lg:text-md">Unidades em funcionamento</p>
                 </div>
 
                 <div class="px-8 py-16 m-3 space-y-8 w-fit">
                     <h3 class="text-center self-center font-extrabold text-8xl text-accent">
-                        <!-- <span class="[counter-set:_num_var(--num-assets)] before:content-[counter(num)]"></span> -->
-                        <span class="counter">0</span>    
+                        <span>0</span>    
                     </h3>
                     <p class="text-center text-lg lg:text-md text-nowrap">Toneladas de CO2 <br>não foram emitidas</p>
                 </div>
 
                 <div class="px-8 py-16 m-2 space-y-8">
                     <h3 class="text-center self-center font-extrabold text-8xl text-accent">
-                        <!-- <span class="[counter-set:_num_var(--num-users)] before:content-[counter(num)] text-nowrap"><span>k</span></span>     -->
-                        <span class="counter">0</span>
+                        <span>0</span>k
                     </h3>
                     <p class="text-center text-lg lg:text-md text-nowrap">Compras realizadas <br>em um ano</p>
                 </div>
@@ -56,50 +52,8 @@ import Btn from "../components/cta-button.astro";
 
 </section>
 
-<style>
-    @property --num-transactions {
-        syntax: "<integer>";
-        initial-value: 0;
-        inherits: false;
-    }
-
-    @property --num-assets {
-        syntax: "<integer>";
-        initial-value: 0;
-        inherits: false;
-    }
-
-    @property --num-users {
-        syntax: "<integer>";
-        initial-value: 0;
-        inherits: false;
-    }
-
-    @keyframes counter {
-        from {
-            --num-transactions: 0;
-            --num-assets: 0;
-            --num-users: 0;
-        }
-        to {
-            --num-transactions: 8;
-            --num-assets: 23;
-            --num-users: 20;
-        }
-    }
-
-    .counter {
-        opacity: 1;
-        transition: counter 5s ease-out forwards;
-    }
-
-    .counter.active {
-        opacity: 1;
-    }
-</style>
-
-
 <script>
+
     let isAnimationLoaded = false;
     
     window.addEventListener("scroll", function() {
@@ -115,16 +69,52 @@ import Btn from "../components/cta-button.astro";
                 rect.right <= (window.innerWidth || document.documentElement.clientWidth)
             );
 
-            
             if (isInViewport) {
+                
                 let spans = element.getElementsByTagName("span");
                 
-                for (let span of spans) {
-                    span.classList.add("counter");
-                    
-                }
-                isAnimationLoaded = !isAnimationLoaded;
+                
+                animateValue(spans[0], 0, 8, 1200)
+                animateValue(spans[1], 0, 23, 1200)
+                animateValue(spans[2], 0, 20, 1200)
+                
+                isAnimationLoaded = true;
             } 
         }
     });
+
+    function animateValue(obj, start, end, duration) {
+        const INTERVAL_TIME = 10;
+        if (duration < 100) {
+            duration = 100;
+        } else if (duration > 10000) {
+            duration = 10000;
+        }
+
+        let decimals = (end % 1 != 0) ? (end.toString().split('.')[1] || '').length : 0;
+                
+        if (end === start) {
+            obj.innerHTML = start.toFixed(decimals);
+            return;
+        }
+                
+        const stepTime = Math.ceil(duration / INTERVAL_TIME);
+        let doneLoops = 0;
+
+        let quantityPerLoop = end / stepTime;
+
+        let increment = (end - start) / stepTime;
+        let current = start;
+
+        const INTERVAL = setInterval(function () {
+            current += quantityPerLoop;
+            obj.innerHTML = current.toFixed(decimals);
+            if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+                clearInterval(INTERVAL);
+                obj.innerHTML = parseFloat(end).toFixed(decimals);
+            }
+        }, INTERVAL_TIME);
+
+        isAnimationLoaded = true;
+    }    
 </script>

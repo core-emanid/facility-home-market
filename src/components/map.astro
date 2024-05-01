@@ -17,7 +17,11 @@ export const googleApiKey = import.meta.env.GOOGLE_API_KEY;
 
 <script is:inline>
     
+    const screenWeight = document.documentElement.clientWidth;
+    let zoom = screenWeight > 600 ? 12 : 11;
+    
     async function initMap() {
+
         const locations = [
             {
                 lat: -23.211972,
@@ -243,8 +247,8 @@ export const googleApiKey = import.meta.env.GOOGLE_API_KEY;
 
         // creating map structure and ui config
         map = new Map(document.getElementById('map'),{
-                zoom: 15,
-                center: locations[0],
+                zoom: zoom,
+                center: {lat: -23.243859, lng:-45.895457},
                 mapId: 'DEMO_MAP_ID',
                 mapTypeId: 'roadmap',
                 zoomControl: false,
@@ -266,8 +270,9 @@ export const googleApiKey = import.meta.env.GOOGLE_API_KEY;
 
             let icon = document.createElement("img");
             icon.width = 65;
-            icon.style = "border-radius: 100%; box-shadow: 0 0 2px 2px lightblue;";
-            icon.src = "https://f005.backblazeb2.com/file/debbuggers/Icone-mapa-Facility.png";
+            icon.style = "border-radius: 100%; box-shadow: 0 0 2px 2px aliceblue;";
+            // icon.src = "https://f005.backblazeb2.com/file/debbuggers/Icone-mapa-Facility.png";
+            icon.src = "../src/images/Icone-mapa-Facility.png";
 
             let iconMarkerView = new AdvancedMarkerElement({
                 map,

@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import bannerImg from "../images/Banner-inicial.png"
 import Btn from "../components/cta-button.astro";
-import logo from "../images/logo-facility-home-market-footer.svg";
+import logo from "../images/Icone-mapa-Facility.png";
 ---
 <main class="flex flex-col-reverse bg-secondary items-center justify-center py-12 lg:p-8 lg:pb-40 lg:flex-row ">
     
@@ -21,16 +21,16 @@ import logo from "../images/logo-facility-home-market-footer.svg";
     <section class="flex flex-col w-fit m-6 max-lg:items-center">
         <div class="grid grid-cols-4 grid-rows-4 w-[300px] h-[300px] lg:w-[650px] lg:h-[650px] rounded-full bg-[url('/images/Banner-inicial.png')] bg-cover max-sm:py-8">
             
-            <div class="bg-base-100 h-fit w-fit py-1 px-2 md:py-2 md:px-3 max-sm:mb-4 rounded-full self-end justify-self-end">
+            <div class="bg-base-100 h-fit w-fit p-1 max-sm:mb-4 rounded-full self-end justify-self-end">
                 
                 <!-- desktop -->
                 <div class="hidden lg:block">
-                    <Image src={logo} width={40} alt="test"/>   
+                    <Image src={logo} width={50} alt="test"/>   
                 </div>
 
                 <!-- mobile -->
                 <div class="lg:hidden">
-                    <Image src={logo} width={20} alt="test"/>   
+                    <Image src={logo} width={30} alt="test"/>   
                 </div>
             </div>
             

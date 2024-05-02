@@ -3,7 +3,6 @@ import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import vercel from "@astrojs/vercel/serverless";
 
-// https://astro.build/config
 export default defineConfig({
   site: 'http://localhost:4567',
   output: 'server',

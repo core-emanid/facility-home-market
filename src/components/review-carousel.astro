@@ -1,0 +1,53 @@
+---
+import 'swiper/css';
+import Slide from '../components/slide.astro';
+import Card from './card.astro';
+import avatarPic from "../images/2a-Monitoramento-com-cameras.png";
+
+---
+ 
+<div class="swiper-review" role="region" aria-label="carousel">
+    <div class="swiper-wrapper" role="group">
+        <Card avatarPic={avatarPic} 
+            name="Ennet Lee" jobTitle="Monitor" 
+            depoiment=`Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. 
+                Phasellus quis volutpat lorem. 
+                Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. 
+                Phasellus quis volutpat lorem.
+                consectetur adipiscing elit. 
+                Phasellus quis volutpat lorem.`/>
+    </div>
+</div>
+
+<style>
+    .swiper-slide{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<script>
+    import Swiper from 'swiper';
+
+    let slidesPerView = 1;
+
+    let swiper = new Swiper('.swiper-review', {
+        speed: 15000,
+        loop: true,
+        slidesPerView: slidesPerView,
+        freeMode: {
+            enabled: false
+        },
+        centeredSlides: true,
+        centeredSlidesBounds: true
+    });
+
+
+    setInterval(() => {
+        swiper.slideNext();
+    }, 0);
+
+</script>

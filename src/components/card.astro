@@ -18,21 +18,30 @@ const {
 
 ---
 
-<div class="card w-96 bg-base-100 shadow-md">
+<div class="card max-w-[680px] bg-base-100 shadow-xl rounded-2xl">
   
-  <div class="card-body items-center text-center text-lg pb-0">
+  <div class="card-body items-center text-justify text-xl pb-0">
     <p class="p-4">
       {depoiment}
     </p>
   </div>
 
-  <div class="flex flex-row justify-center p-8">
-    <Image src={avatarPic} alt="" class="rounded-full relative z-1" width={100} alt={`${name}'s avatar`}/>
+  <div class="flex flex-row items-center w-full">
     
-    <span class="flex flex-col pl-4 justify-center self-center text-xl">
-      <h3 class="font-extrabold">{name}</h3>
-      <p class="font-semibold">{jobTitle}</p>
-    </span>
+    <div class="flex flex-row w-[50%] justify-center p-4">
+      <Image src={avatarPic} alt="" class="rounded-full relative z-1" width={100} alt={`${name}'s avatar`}/>
+      
+      <span class="flex flex-col pl-4 justify-center self-center text-xl">
+        <h3 class="font-extrabold">{name}</h3>
+        <p class="font-semibold">{jobTitle}</p>
+      </span>
+    </div>
+    
+    <div class="flex w-[50%] justify-end pr-8 pb-8 self-end gap-2">
+      <button><span class="rounded-full bg-accent text-white font-extrabold text-xl px-3 py-1">{'<'}</span></button>
+      <button><span class="rounded-full bg-accent text-white font-extrabold text-xl px-3 py-1">{'>'}</span></button>
+    </div>
+
   </div>
 
 </div>

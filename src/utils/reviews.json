@@ -1,0 +1,39 @@
+{
+    "reviews": [
+        {
+            "id": 1,
+            "message": "Sou moradora do condomínio e a Facility é um verdadeiro salva-vidas! Sempre que falta algo em casa, sei que posso contar com o mercadinho para me salvar. É muito prático e cômodo ter tudo tão perto!",
+            "author": "Ronise Toscano",
+            "job": "Moradora",
+            "image": "sem-foto.png"
+        },
+        {
+            "id": 2,
+            "message": "A Facility facilita muito a minha vida e da minha família! No dia a dia corrido, é fundamental ter um lugar prático e com variedade de produtos de qualidade. O atendimento também é excelente!",
+            "author": "Franciele Salazar",
+            "job": "Moradora",
+            "image": "franciele-salazar.png"
+        },
+        {
+            "id": 3,
+            "message": "A Facility 24h é a minha aliada para qualquer imprevisto. Seja um doce no meio da noite ou um ingrediente que faltou no almoço de domingo, o mercadinho sempre me salva. As massas prontas são ótimas para quando o tempo é curto!",
+            "author": "Claudia Faria Khouri",
+            "job": "Moradora",
+            "image": "sem-foto.png"
+        },
+        {
+            "id": 4,
+            "message": "Como síndico, posso dizer que a Facility Home Market é a melhor opção para o nosso condomínio. O atendimento é impecável, a reposição dos produtos é ágil e a qualidade das mercadorias é excelente. Os moradores estão muito satisfeitos com o serviço!",
+            "author": "Rafael",
+            "job": "Síndico",
+            "image": "rafael.png"
+        },
+        {
+            "id": 5,
+            "message": "O mercadinho do condomínio superou desafios e se tornou um sucesso com a Facility. Desde abril de 2023, a empresa oferece variedade de produtos, pagamento via maquininha, sistema de segurança e atendimento exemplar, facilitando o dia a dia dos condôminos. Agradecemos a parceria de sucesso!",
+            "author": "Galvão",
+            "job": "Síndico",
+            "image": "galvao.png"
+        }
+    ]
+}

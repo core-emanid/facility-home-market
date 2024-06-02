@@ -1,4 +1,8 @@
 ---
+
+function closeSidebar(){
+  document.getElementById('my-drawer').click()
+}
 ---
 
 <div class="drawer px-4 py-2 w-fit self-center">
@@ -13,13 +17,13 @@
     <div class="drawer-side">
       <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
       <ul class="menu p-4 w-[80%] max-w-[80%] min-h-full bg-base-200 text-base-content items-center space-y-1">
-        <li><a class="border-none text-[#494F4F] text-center" type="button" href="#about">A Facility</a></li>
-        <li><a class="border-none text-[#494F4F] text-center" type="button" href="#products">Produtos</a></li>
-        <li><a class="border-none text-[#494F4F] text-center" type="button" href="#benefits">Beneficios</a></li>
-        <li><a class="border-none text-[#494F4F] text-center" type="button" href="#reviews">Clientes</a></li>
-        <li><a class="border-none text-[#494F4F] text-center" type="button" href="#contact">Contato</a></li>
+        <li><a onclick='closeSidebar()' class="border-none text-[#494F4F] text-center" type="button" href="#about">A Facility</a></li>
+        <li><a onclick='closeSidebar()' class="border-none text-[#494F4F] text-center" type="button" href="#products">Produtos</a></li>
+        <li><a onclick='closeSidebar()' class="border-none text-[#494F4F] text-center" type="button" href="#benefits">Beneficios</a></li>
+        <li><a onclick='closeSidebar()' class="border-none text-[#494F4F] text-center" type="button" href="#reviews">Clientes</a></li>
+        <li><a onclick='closeSidebar()' class="border-none text-[#494F4F] text-center" type="button" href="#contact">Contato</a></li>
         <li>
-          <a href="https://api.whatsapp.com/send/?phone=5511994961361&text=Oi,%20gostaria%20de%20saber%20mais%20sobre%20ser%20licenciado%20Facility" 
+          <a onclick='closeSidebar()' href="https://api.whatsapp.com/send/?phone=5511994961361&text=Oi,%20gostaria%20de%20saber%20mais%20sobre%20ser%20licenciado%20Facility" 
              type="button" class="border-none text-base-100 rounded-full bg-secondary font-bold">
              Seja um licenciado
           </a>
@@ -27,3 +31,9 @@
       </ul>
     </div>
 </div>
+
+<script defer>
+  function closeSidebar(){
+    document.getElementById('my-drawer').click()
+  }
+</script>

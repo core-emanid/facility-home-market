@@ -19,7 +19,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.png')
 ---
 
 <div class="w-full flex justify-center shadow-xl rounded-2xl p-4">
-    <div class="carousel w-full max-w-[750px] min-h-[300px]">
+    <div id='review-carousel' class="carousel w-full max-w-[750px] min-h-[300px]">
         {
             reviews.map((slide) => (
                 <div id={`slide-${slide.id}`} class="carousel-item relative w-full">
@@ -57,3 +57,26 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.png')
         }
     </div>
 </div>
+
+<script>
+    let startX;
+    const element = document.getElementById("review-carousel");
+
+    element.addEventListener("touchstart", function(event) {
+        startX = event.touches[0].clientX;
+    });
+
+    element.addEventListener("touchend", function(event) {
+        const endX = event.changedTouches[0].clientX;
+        const swipeX = endX - startX;
+
+        if(Math.abs(swipeX) > 80){
+            if (swipeX > 0) {
+                console.log("Swiped right!");
+            } else if (swipeX < 0) {
+                
+            }
+        }
+       
+    });
+</script>

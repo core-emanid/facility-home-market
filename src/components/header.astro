@@ -3,30 +3,30 @@ import { Icon } from "astro-icon/components"
 import Sidebar from "./sidebar.astro"
 import {Image} from "astro:assets";
 import logo from "../images/logo-facility-home-market-header.svg";
+import {whatsappLink} from '../utils/mail';
 ---
 <header class="flex flex-col w-full align-center">
-    <nav class="hidden flex-row bg-primary justify-end pr-20 py-1 sm:flex">
+    <nav class="hidden flex-row bg-primary justify-end pr-40 py-1 sm:flex">
         <a class="rounded-full bg-white p-1 mx-1 text-primary" 
             type="button" href="https://www.instagram.com/facilityhomemarket/" 
             target="_blank">
-            <Icon name={'fa:instagram'} size={8} />
+            <Icon name={'fa:instagram'} size={15} />
         </a>
         <a class="rounded-full bg-white p-1 mx-1 text-primary hidden" type="button" href="#" target="_blank">
-            <Icon name={'fa:facebook'} size={8} />
+            <Icon name={'fa:facebook'} size={15} />
         </a>
         <a class="rounded-full bg-white p-1 mx-1 text-primary" type="button" href="#contact" target="_blank">
-            <Icon name={'fa-regular:envelope'} size={8} />
+            <Icon name={'fa-regular:envelope'} size={15} />
         </a>
         <a class="rounded-full bg-white p-1 mx-1 text-primary" type="button" 
-            href="https://api.whatsapp.com/send/?phone=5511994961361&text=Oi,%20acessei%20o%20site%20e%20gostaria%20de%20conversar%20sobre%20a%20Facility" 
-            target="_blank">
-            <Icon name={'fa:whatsapp'} size={8} />
+            href={whatsappLink} target="_blank">
+            <Icon name={'fa:whatsapp'} size={15} />
         </a>
     </nav>
 
     <nav class="hidden sm:flex bg-base-100 py-4 justify-around items-center">
         <div class="mx-5">
-            <Image src={logo} height={200} width={200} alt="imagem" loading="lazy" />
+            <Image src={logo} height={200} width={200} alt="imagem"/>
         </div>
         <div role="button" class="py-2">
             <a class="border-none text-[#494F4F] px-4 text-center" type="button" href="#about">A Facility</a>
@@ -35,8 +35,8 @@ import logo from "../images/logo-facility-home-market-header.svg";
             <a class="border-none text-[#494F4F] px-4 text-center" type="button" href="#reviews">Clientes</a>
             <a class="border-none text-[#494F4F] px-4 text-center" type="button" href="#contact">Contato</a>
         </div>
-        <a href="https://api.whatsapp.com/send/?phone=5511994961361&text=Oi,%20gostaria%20de%20saber%20mais%20sobre%20ser%20licenciado%20Facility" 
-           type="button" class="border-none text-base-100 rounded-full bg-secondary px-5 py-2 text-lg font-semibold">
+        <a href={whatsappLink} type="button" 
+            class="border-none text-base-100 rounded-full bg-secondary px-5 py-2 text-lg font-semibold">
            Seja um licenciado
         </a>
     </nav>

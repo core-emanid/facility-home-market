@@ -9,7 +9,7 @@ const {
 ---
 
 <div class="card w-fit shadow-xl rounded-3xl p-4 mx-4 my-8">
-    <Image src={imageUrl} height={200} width={200} format="png"
-            aria-label="Rafael picture" alt=`${description}`/>
+    <Image src={imageUrl} height={200} width={200} format="png" loading="lazy"
+            aria-label={title} alt={description}/>
     <h3 class="text-center pt-4 font-extrabold text-lg">{title}</h3>
 </div>

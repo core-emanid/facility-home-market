@@ -4,7 +4,7 @@ import icon from "astro-icon";
 import vercel from "@astrojs/vercel/serverless";
 
 export default defineConfig({
-  site: 'http://localhost:4567',
+  site: 'https://www.facilityhomemarket.com.br',
   output: 'server',
   server: {
     port: 4567

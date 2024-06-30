@@ -59,37 +59,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.png')
     </div>
 </div>
 
-<!-- Mobile -->
-<div class="w-full flex justify-center shadow-sm rounded-2xl p-4 lg:hidden">
-    <div class="swiper-review w-full max-w-[750px] min-h-[300px]">
-        <div class="swiper-wrapper" role="group">
-            {
-                reviews.map((slide) => (
-                    <div class="h-full w-full swiper-slide">
-            
-                        <div class="flex flex-col items-center justify-between px-6 h-full">
-                            <div class="w-[60%] lg:w-full text-justify text-xl pb-2">
-                                <p class="p-4">"{slide.message}"</p>
-                            </div>
-                                        
-                            <div class="flex flex-row items-center w-full">
-                                <div class="flex flex-row w-full justify-center lg:justify-start p-4">
-                                    <Image src={images[`/src/images/depoimentos-${slide.image}`]()} 
-                                    alt={`Foto de ${slide.author}`} class="rounded-full relative z-1" width={100} />
-                                    <span class="flex flex-col pl-4 justify-center self-center text-xl">
-                                        <h3 class="font-extrabold">{slide.author}</h3>
-                                        <p class="font-semibold">{slide.job}</p>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                ))
-            }
-        </div>
-    </div>
-</div>
 
 <script>
     import Swiper from 'swiper';

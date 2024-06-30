@@ -11,9 +11,11 @@
     - [Limitações e possíveis problemas](#limitações-e-possíveis-problemas)
       - [Vercel](#vercel)
         - [Servidor de hospedagem](#servidor-de-hospedagem)
+      - [Github](#github)
+        - [Servidor de armazenamento de repositórios (códigos-fonte)](#servidor-de-armazenamento-de-repositórios-códigos-fonte)
   - [Suporte técnico](#suporte-técnico)
     - [FAQ](#faq)
-  - [Referências](#referências)
+  - [Referências Técnicas](#referências-técnicas)
 
 ## Sobre o projeto
 Website oficial da Facility Home Market
@@ -98,13 +100,16 @@ Raiz do repositório
   - [Astro](https://astro.build/)
   - [TailwindCSS](https://tailwindcss.com/)
   - [DaisyUI](https://daisyui.com/)
-
+  - [Typescript](https://www.typescriptlang.org/)
+  - [Git](https://git-scm.com/)
+  - [Markdown](https://www.markdownguide.org/)
+  
 ### Serviços externos
 - Serviços externos utilizados:
   - [Brevo](https://www.brevo.com/pt/)
   - [Vercel](https://vercel.com/)
   - [Github](https://github.com/)
-  - [Google Maps API](https://www.google.com/maps)
+  - [Google Maps API](https://www.google.com/maps/)
   
 #### Brevo
 ##### Serviço de automatização de campanhas de marketing e disparo de emails. Usado para transmitir mensagens eletrônicas
@@ -122,17 +127,78 @@ Outros serviços podem ser encontrados dentro do portal da Brevo, tais como:
 - 200 envios por dia
 - à depender do fluxo, o limite pode ser excedido, suspendendo o serviço pelo restante do dia vigente
 
-Sabendo dos limites do plano vigente, foi desenvolvido um mecânismo no website para previnir que usuários maliciosos enviem múltiplos formulários e, também, que modelos de automações disparem inúmeros envios de forma prejudicial, baseando-se no **timestamp (momento exato)** do últímo envio e **client (método de envio)** do último formulário enviado com êxito.
+Sabendo dos limites do plano vigente, foi desenvolvido um mecânismo no website para previnir que usuários maliciosos enviem múltiplos formulários e, também, que modelos de automações disparem inúmeros envios de forma prejudicial, baseando-se no **timestamp (momento exato)** do últímo envio e **client (método de envio)** do último formulário enviado __com êxito__.
 
 #### Vercel
 ##### Servidor de hospedagem
-(vercel, funcionalidades, limites, acesso)
+
+A Vercel é a responsável pelo processo de hospedagem do website da Facility. É um serviço que gerencia toda a parte de servidor e disponibilidade da aplicação. A vercel trabalha com planos e assinaturas, disponibilizando diferentes faixas de limites e serviços a partir de preços variáveis para todo o tipo de uso, desde os mais leves aos mais pesados. No projeto facility, atualmente utilizamos o limite gratuito (plano hobby), que garante: 
+
+- Protocolo HTTPS/SSL (certificação de segurança e autenticação de provedor de serviço)
+- Firewall para ataques DDoS (afetam a disponibilidade de um site ou aplicação com multiplas requisições fantasmas)
+- Otimização de imagens fornecidas através do serviço de hospedagem
+- 100GB de download otimizados por mês
+- Dashboard integrado com visualização de acessos e gráficos gerados automaticamente com base nas métricas de acessos
+
+Mediante a necessidade e análise de custos, a possibilidade de extensão do limite é uma realidade muito prática. Basta entrar no site da Vercel com o login e senha associados e contratar um novo plano utilizando um cartão de crédito. Nenhuma configuração adicional será necessária dentro do código-fonte do website, visto que é um serviço gerenciado pelo próprio servidor da Vercel.
+
+Outros serviços podem ser encontrados dentro do portal da Vercel, tais como: 
+- análise e importação e relatórios de conteúdos mais acessados dentro do site
+- gráficos com médias de acessos diários
+- monitoramento de limite e histórico da conta
+
+#### Github
+##### Servidor de armazenamento de repositórios (códigos-fonte)
+
+O Github é a responsável pelo processo de hospedagem do código-fonte da Facility. É um serviço que armazena, gerencia e disponibiliza todo o acesso ao aspecto técnico do desenvolvimento do projeto. O github é gratuito e o acesso aos outros serviços externos citados se dão, em sua maioria, por intermédio da conta responsável pelo repositório
+
+Dentro do repositório, com a conta responsável ou outra com autorização se pode: 
+- desenvolver novas funcionalidades ao site
+- recriar instancias em outros serviços e domínios
+- integrar o website com outros serviços e redefinir a versão live alterando o código na raiz (main)
 
 ## Suporte técnico
-(processos de abertura de chamado, formalização de documentos, acessos)
+
+Para um diagnóstico de problema relacionado ao serviço prestado, envie um email para **rafaeldvid42+suporte@gmail.com**
+- No assunto, especifique: 'Facility Home Market - Suporte'
+- No corpo, descreva o problema com o máximo de informações que tiver
+- Em até 3 dias úteis receberá uma réplica com a solução encontrada
+
+Para tanto saliento que, segundo o contrato assinado, a cobertura de 6 meses se faz válida em pequenas alterações e afins. Alterações de médio e grande porte são sujeitos a custos adicionais e a prazos variáveis.
+
+Afim de poder efetivar o acesso mais prático dentro das dependencias do projeto, forneci, através da conta-mãe, acesso ao meu perfil, assim consigo efetivar mudanças sob demanda sem ruídos de comunicação. Ao fim do prazo de cobertura de garantia de suporte (6 meses), a cliente fica livre para remover o meu acesso se assim desejar, para fins de segurança.
 
 ### FAQ
-(Contato do desenvolvedor, FAQ)
 
-## Referências
-(Artigos, blogs, serviços)
+**Q: Tenho outro desenvolvedor que gostaria de continuar o projeto e/ou avaliar o código. Como funciona?**
+**R: Me voluntario para sanar quaisquer duvidas sobre o processo de desenvolvimento, tentei ser o mais colaborativo possivel na criação deste documento, sendo assim a praticidade depende também da expertise do profissional que irá ter acesso ao projeto posteriormente**
+
+**Q: Mandei email e não obtive nenhuma resposta, o que faço?**
+**R: Se caso o prazo de 3 dias úteis não tenha sido concretizado, peço por gentileza que aguarde. De outro caso, pode retomar o contato via email novamente. Estou disponível também via Linkedin: https://linkedin.com/in/rdvid**
+
+**Q: Tenho outro projeto em vista, como faço para negociarmos?**
+**R: Novos negócios e indicações serão priorizadas via Linkedin: https://linkedin.com/in/rdvid**
+
+## Referências Técnicas
+* https://daisyui.com/
+* https://www.frontendreference.com/get-started-with-tailwindcss.html
+* https://tailwindcss.com/docs/installation
+* https://github.com/git-guides
+* https://vercel.com/docs/frameworks/astro
+* https://docs.astro.build/en/guides/endpoints/
+* https://docs.astro.build/en/getting-started/
+
+<h3 align=center>With ❤️ by Rafael David:</h2>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://rdvid.tech/">
+        <img src="https://avatars.githubusercontent.com/u/60834135" alt="Rafael David Github profile pic" width=115><br>
+        <sub>
+          <b>Rafael David</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>

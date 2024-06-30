@@ -38,6 +38,7 @@ const productImages = import.meta.glob<{ default: ImageMetadata }>('/src/images/
 
 <script>
     import Swiper from 'swiper';
+    import { Autoplay } from 'swiper/modules';
 
     let clientWidth = document.documentElement.clientWidth;
     let slidesPerView = 4;
@@ -50,20 +51,16 @@ const productImages = import.meta.glob<{ default: ImageMetadata }>('/src/images/
         slidesPerView = 1;
     }
 
+    Swiper.use([Autoplay])
     let swiper = new Swiper('.swiper', {
         speed: 3000,
+        autoplay: {
+            delay: 200
+        },
         loop: true,
         slidesPerView: slidesPerView,
-        freeMode: {
-            enabled: false
-        },
         centeredSlides: true,
         centeredSlidesBounds: true
     });
-
-
-    setInterval(() => {
-        swiper.slideNext();
-    }, 0);
 
 </script>

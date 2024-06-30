@@ -1,8 +1,64 @@
 ---
 import 'swiper/css';
-import { products } from '../utils/products.json';
+import { Image } from 'astro:assets';
 
-
+const products = [
+        {
+            "title": "Bomboniere",
+            "imageUrl": "bomboniere",
+            "description": ""
+        },
+        {
+            "title": "Congelados",
+            "imageUrl": "congelados",
+            "description": ""
+        },
+        {
+            "title": "Sorvetes",
+            "imageUrl": "sorvetes",
+            "description": ""
+        },
+        {
+            "title": "Saudável",
+            "imageUrl": "saudavel",
+            "description": ""
+        },
+        {
+            "title": "Higiene",
+            "imageUrl": "higiene",
+            "description": ""
+        },
+        {
+            "title": "Alcoólicos",
+            "imageUrl": "alcoolicos",
+            "description": ""
+        },
+        {
+            "title": "Adega",
+            "imageUrl": "adega",
+            "description": ""
+        },
+        {
+            "title": "Não alcoólicos",
+            "imageUrl": "nao-alcoolicos",
+            "description": ""
+        },
+        {
+            "title": "Snacks",
+            "imageUrl": "snacks",
+            "description": ""
+        },
+        {
+            "title": "Refrigerados",
+            "imageUrl": "refrigerados",
+            "description": ""
+        },
+        {
+            "title": "Churrasco",
+            "imageUrl": "churrasco",
+            "description": ""
+        }
+]
 ---
  
 <div class="swiper" role="region" aria-label="carousel">
@@ -11,14 +67,14 @@ import { products } from '../utils/products.json';
             products.map(({title, imageUrl, description}) => (
                 <div class="swiper-slide my-8" role="group" aria-roledescription="Slide">
                     <div class="card w-fit shadow-xl rounded-3xl p-4 mx-4 my-8">
-                        {/* <Image src={productImages[`/src/images/produtos-${imageUrl}.png`]()}
+                        <Image src={`/src/images/produtos-${imageUrl}.png`}
                             class="self-center"
                             height={200} 
                             width={200} 
                             format="png" 
                             loading="lazy"
                             aria-label={title} 
-                            alt={description}/> */}
+                            alt={description}/>
                         <h3 class="text-center pt-4 font-extrabold text-lg">{title}</h3>
                     </div>
                 </div>

@@ -97,7 +97,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.png')
     let swiperReview = new Swiper('.swiper-review', {
         speed: 1200,
         loop: true,
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         freeMode: {
             enabled: false
         },

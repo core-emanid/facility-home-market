@@ -92,12 +92,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.png')
 </div>
 
 <script>
-    import * as ReviewSwiper from 'swiper';
+    import Swiper from 'swiper';
 
-    let swiperReview = new ReviewSwiper.Swiper('.swiper-review', {
+    let swiperReview = new Swiper('.swiper-review', {
         speed: 1200,
         loop: true,
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         freeMode: {
             enabled: false
         },

@@ -1,77 +1,9 @@
 ---
 import 'swiper/css';
-import Slide from '../components/slide.astro';
+import { Image } from 'astro:assets';
+import { products } from '../utils/products.json';
 
-import adega from "../images/produtos-Adega.png";
-import alcoolicos from "../images/produtos-Alcoolicos.png";
-import bomboniere from "../images/produtos-Bomboniere.png";
-import churrasco from "../images/produtos-Churrasco.png";
-import congelado from "../images/produtos-Congelados.png";
-import higiene from "../images/produtos-Higiene.png";
-import naoAlcoolicos from "../images/produtos-Nao-Alcoolcos.png";
-import refrigerados from "../images/produtos-Refrigerados.png";
-import saudavel from "../images/produtos-Saudavel.png";
-import snacks from "../images/produtos-Snacks.png";
-import sorvetes from "../images/produtos-Sorvetes.png";
-
-const products = [
-        {
-            title: "Bomboniere",
-            imageUrl: bomboniere,
-            description: ""
-        },
-        {
-            title: "Congelados",
-            imageUrl: congelado,
-            description: ""
-        },
-        {
-            title: "Sorvetes",
-            imageUrl: sorvetes,
-            description: ""
-        },
-        {
-            title: "Saudável",
-            imageUrl: saudavel,
-            description: ""
-        },
-        {
-            title: "Higiene",
-            imageUrl: higiene,
-            description: ""
-        },
-        {
-            title: "Alcoólicos",
-            imageUrl: alcoolicos,
-            description: ""
-        },
-        {
-            title: "Adega",
-            imageUrl: adega,
-            description: ""
-        },
-        {
-            title: "Não alcoólicos",
-            imageUrl: naoAlcoolicos,
-            description: ""
-        },
-        {
-            title: "Snacks",
-            imageUrl: snacks,
-            description: ""
-        },
-        {
-            title: "Refrigerados",
-            imageUrl: refrigerados,
-            description: ""
-        },
-        {
-            title: "Churrasco",
-            imageUrl: churrasco,
-            description: ""
-        }
-]
-
+const productImages = import.meta.glob<{ default: ImageMetadata }>('/src/images/produtos-*.png');
 ---
  
 <div class="swiper" role="region" aria-label="carousel">
@@ -79,7 +11,17 @@ const products = [
         {
             products.map(({title, imageUrl, description}) => (
                 <div class="swiper-slide my-8" role="group" aria-roledescription="Slide">
-                    <Slide title={title} imageUrl={imageUrl} description={description} />
+                    <div class="card w-fit shadow-xl rounded-3xl p-4 mx-4 my-8">
+                        <Image src={productImages[`/src/images/produtos-${imageUrl}.png`]()}
+                            class="self-center"
+                            height={200} 
+                            width={200} 
+                            format="png" 
+                            loading="lazy"
+                            aria-label={title} 
+                            alt={description}/>
+                        <h3 class="text-center pt-4 font-extrabold text-lg">{title}</h3>
+                    </div>
                 </div>
             ))
         }

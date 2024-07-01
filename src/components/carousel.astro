@@ -2,60 +2,72 @@
 import 'swiper/css';
 import { Image } from 'astro:assets';
 
+import adega from '../images/produtos-adega.png';
+import bomboniere from '../images/produtos-bomboniere.png';
+import alcoolicos from '../images/produtos-alcoolicos.png';
+import churrasco from '../images/produtos-churrasco.png';
+import congelados from '../images/produtos-congelador.png';
+import higiene from '../images/produtos-higiene.png';
+import naoAlcoolicos from '../images/produtos-nao-alcoolicos.png';
+import refrigerados from '../images/produtos-refrigerados.png';
+import saudavel from '../images/produtos-saudavel.png';
+import snacks from '../images/produtos-snacks.png';
+import sorvetes from '../images/produtos-sorvetes.png';
+
 const products = [
         {
             "title": "Bomboniere",
-            "imageUrl": "bomboniere",
+            "image": bomboniere,
             "description": ""
         },
         {
             "title": "Congelados",
-            "imageUrl": "congelados",
+            "imageUrl": congelados,
             "description": ""
         },
         {
             "title": "Sorvetes",
-            "imageUrl": "sorvetes",
+            "imageUrl": sorvetes,
             "description": ""
         },
         {
             "title": "Saudável",
-            "imageUrl": "saudavel",
+            "imageUrl": saudavel,
             "description": ""
         },
         {
             "title": "Higiene",
-            "imageUrl": "higiene",
+            "imageUrl": higiene,
             "description": ""
         },
         {
             "title": "Alcoólicos",
-            "imageUrl": "alcoolicos",
+            "imageUrl": alcoolicos,
             "description": ""
         },
         {
             "title": "Adega",
-            "imageUrl": "adega",
+            "imageUrl": adega,
             "description": ""
         },
         {
             "title": "Não alcoólicos",
-            "imageUrl": "nao-alcoolicos",
+            "imageUrl": naoAlcoolicos,
             "description": ""
         },
         {
             "title": "Snacks",
-            "imageUrl": "snacks",
+            "imageUrl": snacks,
             "description": ""
         },
         {
             "title": "Refrigerados",
-            "imageUrl": "refrigerados",
+            "imageUrl": refrigerados,
             "description": ""
         },
         {
             "title": "Churrasco",
-            "imageUrl": "churrasco",
+            "imageUrl": churrasco,
             "description": ""
         }
 ]
@@ -64,10 +76,10 @@ const products = [
 <div class="swiper" role="region" aria-label="carousel">
     <div class="swiper-wrapper" role="group">
         {
-            products.map(({title, imageUrl, description}) => (
+            products.map(({title, image, description}) => (
                 <div class="swiper-slide my-8" role="group" aria-roledescription="Slide">
                     <div class="card w-fit shadow-xl rounded-3xl p-4 mx-4 my-8">
-                        <Image src={`/src/images/produtos-${imageUrl}.png`}
+                        <Image src={image}
                             class="self-center"
                             height={200} 
                             width={200} 

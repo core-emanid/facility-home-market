@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import logo from "../images/logo-facility-home-market-header.svg";
-import {whatsappLink} from '../utils/mail';
+import {whatsappLinkLicenciado} from '../utils/mail';
 
 ---
 
@@ -18,7 +18,7 @@ import {whatsappLink} from '../utils/mail';
     </nav> 
     <nav class="flex flex-col max-lg:items-center max-lg:w-full px-10 lg:leading-4">
         <a class="link link-hover" href="#contact">Contato</a>
-        <a class="link link-hover" href={whatsappLink}>Seja um licenciado</a>
+        <a class="link link-hover" href={whatsappLinkLicenciado}>Seja um licenciado</a>
         <nav class="flex flex-row bg-base-100 pt-4 max-md:justify-center">
             <a class="rounded-full bg-accent p-[6%] mx-1 text-base-100" type="button" href="https://www.instagram.com/facilityhomemarket/" target="_blank">
                 <Icon name={'fa:instagram'} size={15} />
@@ -30,7 +30,7 @@ import {whatsappLink} from '../utils/mail';
                 <Icon name={'fa-regular:envelope'} size={15} />
             </a>
             <a class="rounded-full bg-accent p-[6%] mx-1 text-base-100" type="button" 
-                href={whatsappLink} target="_blank">
+                href={whatsappLinkLicenciado} target="_blank">
                 <Icon name={'fa:whatsapp'} size={15} />
             </a>
         </nav>

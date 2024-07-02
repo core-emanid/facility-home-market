@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import logo from "../images/logo-facility-home-market-header.svg";
-import {whatsappLinkLicenciado} from '../utils/mail';
+import {whatsappLink, whatsappLinkLicenciado} from '../utils/mail';
 
 ---
 
@@ -30,7 +30,7 @@ import {whatsappLinkLicenciado} from '../utils/mail';
                 <Icon name={'fa-regular:envelope'} size={15} />
             </a>
             <a class="rounded-full bg-accent p-[6%] mx-1 text-base-100" type="button" 
-                href={whatsappLinkLicenciado} target="_blank">
+                href={whatsappLink} target="_blank">
                 <Icon name={'fa:whatsapp'} size={15} />
             </a>
         </nav>

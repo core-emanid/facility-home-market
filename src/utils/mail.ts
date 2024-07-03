@@ -2,8 +2,8 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 const {EMAIL_TO, EMAIL_FROM} = process.env;
-export const whatsappLinkLicenciado = 'https://api.whatsapp.com/send/?phone=5512991254065&text=Oi,%20acessei%20o%20site%20e%20gostaria%20de%20conversar%20sobre%20a%20Facility';
-export const whatsappLink = 'https://api.whatsapp.com/send/?phone=5511994961361&text=Oi,%20gostaria%20de%20saber%20mais%20sobre%20ser%20licenciado%20Facility';
+export const whatsappLink = 'https://api.whatsapp.com/send/?phone=5512991254065&text=Oi,%20acessei%20o%20site%20e%20gostaria%20de%20conversar%20sobre%20a%20Facility';
+export const whatsappLinkLicenciado = 'https://api.whatsapp.com/send/?phone=5511994961361&text=Oi,%20gostaria%20de%20saber%20mais%20sobre%20ser%20licenciado%20Facility';
 
 export class Form {
     

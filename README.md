@@ -193,7 +193,7 @@ Afim de poder efetivar o acesso mais prático dentro das dependencias do projeto
 <table align="center">
   <tr>
     <td align="center">
-      <a href="https://rdvid.tech/">
+      <a href="https://rdvid.tech">
         <img src="https://avatars.githubusercontent.com/u/60834135" alt="Rafael David Github profile pic" width=115><br>
         <sub>
           <b>Rafael David</b>
@@ -201,7 +201,7 @@ Afim de poder efetivar o acesso mais prático dentro das dependencias do projeto
       </a>
     </td>
     <td align="center">
-      <a href="">
+      <a href="https://www.behance.net/emanuelfazevedo">
         <img src="https://avatars.githubusercontent.com/u/174563844?v=4" alt="Emanuel Github profile pic" width=115><br>
         <sub>
           <b>Emanuel Azevedo</b>

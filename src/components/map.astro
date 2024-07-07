@@ -4,7 +4,6 @@ export const googleApiKey = import.meta.env.GOOGLE_API_KEY;
 
 <div class="flex flex-col bg-transparent w-full justify-center py-8 items-center">
     <h2 class="text-4xl lg:text-5xl font-extrabold pt-4 pb-12 text-center">Cada vez mais condomínios <br> estão aproveitando</h2>
-
     <div class="flex h-[450px] max-md:h-[250px] overflow-hidden w-[80%] rounded-3xl shadow-xl">
         <div id="map" class="rounded-3xl w-[80%] h-[400px] m-[-2px]"></div>
     </div>
@@ -58,7 +57,7 @@ export const googleApiKey = import.meta.env.GOOGLE_API_KEY;
 
         // Request needed libraries.
         const { Map } = await google.maps.importLibrary("maps");
-        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+        const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
         
         // defining white theme for google maps
         const styledMapType = new google.maps.StyledMapType([

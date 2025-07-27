@@ -1,37 +1,46 @@
 ---
+
 ---
 
-<html lang='pt-BR' class="motion-safe:scroll-smooth">
+<html lang="pt-BR" class="motion-safe:scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta property="og:title" content="Facility Home Market" />
-		<meta name="og:description" content="Seu novo minimercado no condomínio" />
+		<meta
+			name="og:description"
+			content="Seu novo minimercado no condomínio"
+		/>
 		<meta property="og:site_name" content="Facility Home Market" />
 		<meta property="title" content="Facility Home Market" />
 		<meta name="description" content="Seu novo minimercado no condomínio" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+			rel="stylesheet"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>Facility Home Market</title>
 	</head>
 
-	<body class="max-w-[1860px]">
+	<body class="w-full mx-auto">
 		<slot />
 	</body>
 </html>
 
 <style is:global>
-	
 	body::-webkit-scrollbar {
 		display: none;
 	}
 
-
-	html, body {
+	html,
+	body {
 		height: fit-content;
 		overflow-x: hidden;
 		scroll-behavior: smooth;
@@ -39,29 +48,28 @@
 
 	* {
 		font-family: "Open Sans", sans-serif;
-  		font-optical-sizing: auto;
+		font-optical-sizing: auto;
 	}
-	
+
 	:root {
 		--primary: "#ff9549";
-		--secondary: "#3cbde5"; 
-		--accent: "#72ad49";	 
-		--neutral: "#494f4f";							 
-		--base-100: "#fff";							 
-		--info: "#008cff";							 
-		--success: "#00c39a";							 
-		--warning: "#ff7600";							 
+		--secondary: "#3cbde5";
+		--accent: "#72ad49";
+		--neutral: "#494f4f";
+		--base-100: "#fff";
+		--info: "#008cff";
+		--success: "#00c39a";
+		--warning: "#ff7600";
 		--error: "#ff888c";
 	}
-	
+
 	span {
 		height: fit-content;
 		padding: 0;
 	}
 
-	h2, h3 {
+	h2,
+	h3 {
 		color: #4b4f4f;
 	}
-
 </style>
-

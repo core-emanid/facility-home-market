@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # Development environment
+  astro-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: facility-home-market-dev
+    ports:
+      - "4567:4567"
+    volumes:
+      # Mount source code for hot reloading
+      - .:/app
+      - /app/node_modules
+      - /app/dist
+    environment:
+      - NODE_ENV=development
+    networks:
+      - astro-network
+    restart: unless-stopped
+
+  # Production build and preview
+  astro-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: facility-home-market-prod
+    ports:
+      - "4568:4567"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - astro-network
+    restart: unless-stopped
+
+networks:
+  astro-network:
+    driver: bridge 

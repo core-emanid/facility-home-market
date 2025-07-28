@@ -2,20 +2,21 @@
 interface Props {
     bgColor: string;
     textColor: string;
+    text?: string;
+    borderColor?: string;
 }
 
-
-const {
-    bgColor,
-    textColor
-} = Astro.props;
-
+const { bgColor, textColor, text, borderColor } = Astro.props;
 ---
 
-<span class="mt-10">
-    <a href="#contact" type="button" style=`color: ${textColor}; background-color: ${bgColor};`
-       class="text-center py-4 px-4 lg:py-6 lg:px-8 font-bold text-sm lg:text-lg rounded-full w-fit">Quero no meu condomínio</a>
+<span class={`mt-10 ${borderColor ? `border-2 border-${borderColor}` : ""}`}>
+    <a
+        href="#contact"
+        type="button"
+        style=`color: ${textColor}; background-color: ${bgColor};`
+        class="text-center py-4 px-4 lg:py-6 lg:px-8 font-bold text-sm lg:text-lg rounded-full w-fit"
+        >{text ?? "Quero no meu condomínio"}</a
+    >
 </span>
 
-<style>
-</style>
+<style></style>

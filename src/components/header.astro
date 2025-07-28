@@ -1,55 +1,107 @@
 ---
-import { Icon } from "astro-icon/components"
-import Sidebar from "./sidebar.astro"
-import {Image} from "astro:assets";
+import { Icon } from "astro-icon/components";
+import Sidebar from "./sidebar.astro";
+import { Image } from "astro:assets";
 import logo from "../images/logo-facility-home-market-header.svg";
-import { whatsappLink, whatsappLinkLicenciado } from '../utils/mail';
+import { whatsappLink, whatsappLinkLicenciado } from "../utils/mail";
 ---
+
 <header class="flex flex-col w-full align-center">
     <nav class="hidden flex-row bg-primary justify-end pr-40 py-1 sm:flex">
-        <a class="rounded-full bg-white p-1 mx-1 text-primary" 
-            type="button" href="https://www.instagram.com/facilityhomemarket/" 
-            target="_blank">
-            <Icon name={'fa:instagram'} size={15} />
+        <a
+            class="rounded-full bg-white p-1 mx-1 text-primary"
+            type="button"
+            href="https://www.instagram.com/facilityhomemarket/"
+            target="_blank"
+        >
+            <Icon name={"fa:instagram"} size={15} />
         </a>
-        <a class="rounded-full bg-white p-1 mx-1 text-primary hidden" type="button" href="#" target="_blank">
-            <Icon name={'fa:facebook'} size={15} />
+        <a
+            class="rounded-full bg-white p-1 mx-1 text-primary hidden"
+            type="button"
+            href="#"
+            target="_blank"
+        >
+            <Icon name={"fa:facebook"} size={15} />
         </a>
-        <a class="rounded-full bg-white p-1 mx-1 text-primary" type="button" href="#contact" target="_blank">
-            <Icon name={'fa-regular:envelope'} size={15} />
+        <a
+            class="rounded-full bg-white p-1 mx-1 text-primary"
+            type="button"
+            href="#contact"
+            target="_blank"
+        >
+            <Icon name={"fa-regular:envelope"} size={15} />
         </a>
-        <a class="rounded-full bg-white p-1 mx-1 text-primary" type="button" 
-            href={whatsappLink} target="_blank">
-            <Icon name={'fa:whatsapp'} size={15} />
+        <a
+            class="rounded-full bg-white p-1 mx-1 text-primary"
+            type="button"
+            href={whatsappLink}
+            target="_blank"
+        >
+            <Icon name={"fa:whatsapp"} size={15} />
         </a>
     </nav>
 
     <nav class="hidden sm:flex bg-base-100 py-4 justify-around items-center">
         <div class="mx-5">
-            <Image src={logo} width={200} alt="Facility Icon" loading="lazy"/>
+            <Image src={logo} width={200} alt="Facility Icon" loading="lazy" />
         </div>
         <div role="button" class="py-2">
-            <a class="border-none text-[#494F4F] px-4 text-center" type="button" href="#about">A Facility</a>
-            <a class="border-none text-[#494F4F] px-4 text-center" type="button" href="#products">Produtos</a>
-            <a class="border-none text-[#494F4F] px-4 text-center" type="button" href="#benefits">Beneficios</a>
-            <a class="border-none text-[#494F4F] px-4 text-center" type="button" href="#reviews">Clientes</a>
-            <a class="border-none text-[#494F4F] px-4 text-center" type="button" href="#contact">Contato</a>
+            <a
+                class="border-none text-[#494F4F] px-4 text-center"
+                type="button"
+                href="/#about">A Facility</a
+            >
+            <a
+                class="border-none text-[#494F4F] px-4 text-center"
+                type="button"
+                href="/franquia">Franquia</a
+            >
+            <a
+                class="border-none text-[#494F4F] px-4 text-center"
+                type="button"
+                href="#products">Produtos</a
+            >
+            <a
+                class="border-none text-[#494F4F] px-4 text-center"
+                type="button"
+                href="#benefits">Beneficios</a
+            >
+            <a
+                class="border-none text-[#494F4F] px-4 text-center"
+                type="button"
+                href="#reviews">Clientes</a
+            >
+            <a
+                class="border-none text-[#494F4F] px-4 text-center"
+                type="button"
+                href="#contact">Contato</a
+            >
         </div>
-        <a href={whatsappLinkLicenciado} type="button" 
-            class="border-none text-base-100 rounded-full bg-secondary px-5 py-2 text-lg font-semibold">
-           Seja um licenciado
+        <a
+            href={whatsappLinkLicenciado}
+            type="button"
+            class="border-none text-base-100 rounded-full bg-secondary px-5 py-2 text-lg font-semibold"
+        >
+            Seja um licenciado
         </a>
     </nav>
 
     <!-- mobile -->
-    <nav class="flex flex-row bg-base-100 py-2 justify-between fixed top w-full z-[9] sm:hidden">
+    <nav
+        class="flex flex-row bg-base-100 py-2 justify-between fixed top w-full z-[9] sm:hidden"
+    >
         <div class="mx-5 self-center">
-            <Image src={logo} height={120} width={120} alt="imagem" loading="lazy"/>
+            <Image
+                src={logo}
+                height={120}
+                width={120}
+                alt="imagem"
+                loading="lazy"
+            />
         </div>
         <div>
             <Sidebar />
         </div>
-        
     </nav>
-
 </header>

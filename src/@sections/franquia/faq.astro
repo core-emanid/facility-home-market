@@ -1,0 +1,100 @@
+---
+// FAQ data
+const faqs = [
+    {
+        question: "Preciso ser morador do Condomínio?",
+        answer: "Não. Você não precisa ser morador do condomínio. Na Facility, temos protocolos validados que ajudam você a encontrar seu local ideal."
+    },
+    {
+        question: "Como acompanho meus números?",
+        answer: "Temos software em operação há mais de 3 anos, super seguro, com segurança contra quedas de conexão e relatórios incríveis."
+    },
+    {
+        question: "No caso de furto, como funciona?",
+        answer: "Temos um sistema robusto de segurança com câmeras de monitoramento. Esse número é quase insignificante. No entanto, se ocorrer, entramos em contato com o morador para fazer a cobrança."
+    },
+    {
+        question: "Posso escolher meus fornecedores?",
+        answer: "Sim. Você pode, mas sempre com a validação do Franqueador. Também fornecemos uma lista completa de fornecedores aprovados."
+    },
+    {
+        question: "Quanto tempo para iniciar uma operação?",
+        answer: "Em média entre 15 a 20 dias. Tudo dependerá da situação do local aprovado. Se for necessária uma reforma, pode demorar um pouco mais."
+    },
+    {
+        question: "Posso ter sócios nesta operação?",
+        answer: "Sim, claro! A maioria dos nossos franqueados tem mais de 3 unidades, precisamente por formar capital com outra pessoa. Analisaremos a documentação."
+    }
+];
+---
+
+<section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <!-- Title -->
+        <div class="text-center mb-12 sm:mb-16 lg:mb-20">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+                <span class="text-green-600">Perguntas frequentes</span> e respostas precisas!
+            </h2>
+        </div>
+
+        <!-- FAQ Grid -->
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12 mb-16 lg:mb-20">
+            {faqs.map((faq, index) => (
+                <div class="bg-white rounded-lg p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">
+                        {faq.question}
+                    </h3>
+                    <p class="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed">
+                        // {faq.answer}
+                    </p>
+                </div>
+            ))}
+        </div>
+
+        <!-- Mini-Market Models -->
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+            <!-- Indoor Model -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="relative">
+                    <img 
+                        src="/src/images/franquia/Imagem_Loja_Indoor.png" 
+                        alt="Modelo INDOOR - Mini mercado interno" 
+                        class="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    />
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 class="text-white text-lg sm:text-xl lg:text-2xl font-bold">
+                            // Modelo INDOOR
+                        </h3>
+                    </div>
+                </div>
+                <div class="p-4 sm:p-6">
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Mini mercado instalado dentro de condomínios, com sistema de autoatendimento e monitoramento 24h.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Container Model -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="relative">
+                    <img 
+                        src="/src/images/franquia/Imagem_Loja_Outdoor.png" 
+                        alt="Modelo CONTAINER - Mini mercado em container" 
+                        class="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    />
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 class="text-white text-lg sm:text-xl lg:text-2xl font-bold">
+                            // Modelo CONTAINER
+                        </h3>
+                    </div>
+                </div>
+                <div class="p-4 sm:p-6">
+                    <p class="text-gray-600 text-sm sm:text-base">
+                        Mini mercado em container adaptado, ideal para áreas externas de condomínios com acesso 24h.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

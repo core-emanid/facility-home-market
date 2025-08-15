@@ -4,17 +4,20 @@ interface Props {
     textColor: string;
     text?: string;
     borderColor?: string;
+    radius?: boolean;
 }
 
-const { bgColor, textColor, text, borderColor } = Astro.props;
+const { bgColor, textColor, text, borderColor, radius } = Astro.props;
 ---
 
-<span class={`mt-10 ${borderColor ? `border-2 border-${borderColor}` : ""}`}>
+<span
+    class={`p-4 mt-10 ${borderColor ? `border-4 border-${borderColor}` : ""} ${radius ? "rounded-full" : ""}`}
+>
     <a
         href="#contact"
         type="button"
         style=`color: ${textColor}; background-color: ${bgColor};`
-        class="text-center py-4 px-4 lg:py-6 lg:px-8 font-bold text-sm lg:text-lg rounded-full w-fit"
+        class={`text-center py-4 px-4 lg:py-6 lg:px-8 font-bold text-sm lg:text-lg rounded-full w-fit`}
         >{text ?? "Quero no meu condomínio"}</a
     >
 </span>

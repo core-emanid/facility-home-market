@@ -1,9 +1,9 @@
 ---
 import { Icon } from "astro-icon/components";
-import Sidebar from "./sidebar.astro";
+import Sidebar from "../../components/sidebar.astro";
 import { Image } from "astro:assets";
-import logo from "../images/logo-facility-home-market-header.svg";
-import { whatsappLink, whatsappLinkLicenciado } from "../utils/mail";
+import logo from "../../images/logo-facility-home-market-header.svg";
+import { whatsappLink, whatsappLinkLicenciado } from "../../utils/mail.ts";
 ---
 
 <header class="flex flex-col w-full align-center">
@@ -60,17 +60,17 @@ import { whatsappLink, whatsappLinkLicenciado } from "../utils/mail";
             <a
                 class="border-none text-[#494F4F] px-4 text-center"
                 type="button"
-                href="#products">Produtos</a
+                href="/#products">Produtos</a
             >
             <a
                 class="border-none text-[#494F4F] px-4 text-center"
                 type="button"
-                href="#benefits">Beneficios</a
+                href="/#benefits">Beneficios</a
             >
             <a
                 class="border-none text-[#494F4F] px-4 text-center"
                 type="button"
-                href="#reviews">Clientes</a
+                href="/#reviews">Clientes</a
             >
             <a
                 class="border-none text-[#494F4F] px-4 text-center"
@@ -83,7 +83,7 @@ import { whatsappLink, whatsappLinkLicenciado } from "../utils/mail";
             type="button"
             class="border-none text-base-100 rounded-full bg-secondary px-5 py-2 text-lg font-semibold"
         >
-            Seja um licenciado
+            Seja um franqueado
         </a>
     </nav>
 

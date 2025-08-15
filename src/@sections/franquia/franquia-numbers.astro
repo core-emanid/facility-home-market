@@ -1,0 +1,208 @@
+---
+import { Image } from "astro:assets";
+import Btn from "../../components/franquia-cta-btn.astro";
+import Icone_Franquia_1 from "../../images/franquia/Icone_Franquia_1.png";
+import Icone_Franquia_2 from "../../images/franquia/Icone_Franquia_2.png";
+import Icone_Franquia_3 from "../../images/franquia/Icone_Franquia_3.png";
+import Icone_Franquia_4 from "../../images/franquia/Icone_Franquia_4.png";
+import Icone_Franquia_5 from "../../images/franquia/Icone_Franquia_5.png";
+import Icone_Franquia_6 from "../../images/franquia/Icone_Franquia_6.png";
+import Icone_Franquia_7 from "../../images/franquia/Icone_Franquia_7.png";
+import Icone_Franquia_8 from "../../images/franquia/Icone_Franquia_8.png";
+---
+
+<section class="bg-green-600 py-12 sm:py-16 lg:py-20 px-6 sm:px-8 lg:px-12">
+    <div class="max-w-7xl mx-auto">
+        <!-- Title -->
+        <div class="text-center mb-12 sm:mb-16 lg:mb-20">
+            <h2
+                class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white mb-4"
+            >
+                Sobre a franquia <span class="font-bold"
+                    >Facility Home Market</span
+                >
+            </h2>
+        </div>
+
+        <!-- Investment Breakdown Section -->
+        <div class="mb-12 sm:mb-16 lg:mb-20">
+            <div
+                class="flex flex-col lg:flex-row flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 text-white"
+            >
+                <!-- Capital Aporte -->
+                <div
+                    class="flex flex-col items-center justify-around text-center"
+                >
+                    <Image
+                        src={Icone_Franquia_1}
+                        alt="Icone Capital Aporte"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Capital Aporte
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        R$ 42 mil
+                    </p>
+                </div>
+
+                <!-- Plus Sign -->
+                <div class="text-3xl sm:text-4xl lg:text-5xl font-bold">+</div>
+
+                <!-- Taxa Franquia -->
+                <div class="flex flex-col items-center text-center">
+                    <Image
+                        src={Icone_Franquia_2}
+                        alt="Icone Taxa Franquia"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Taxa Franquia
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        R$ 15 mil
+                    </p>
+                </div>
+
+                <!-- Plus Sign -->
+                <div class="text-3xl sm:text-4xl lg:text-5xl font-bold">+</div>
+
+                <!-- Capital Giro -->
+                <div class="flex flex-col items-center text-center">
+                    <Image
+                        src={Icone_Franquia_3}
+                        alt="Icone Capital Giro"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Capital Giro
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        R$ 10 mil
+                    </p>
+                </div>
+
+                <!-- Equals Sign -->
+                <div class="text-3xl sm:text-4xl lg:text-5xl font-bold">=</div>
+
+                <!-- Total Aporte -->
+                <div class="flex flex-col items-center text-center">
+                    <Image
+                        src={Icone_Franquia_4}
+                        alt="Icone Total Aporte"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Total Aporte
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        R$ 67 mil
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div
+            class="border-t-4 border-white border-dashed mb-12 sm:mb-16 lg:mb-20"
+        >
+        </div>
+
+        <!-- Financial Performance Metrics -->
+        <div class="mb-12 sm:mb-16 lg:mb-20">
+            <div
+                class="flex flex-col lg:flex-row flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 text-white"
+            >
+                <!-- Faturamento Bruto Médio -->
+                <div
+                    class="flex flex-col items-center justify-around text-center"
+                >
+                    <Image
+                        src={Icone_Franquia_5}
+                        alt="Icone Faturamento Bruto Médio"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Fat. Bruto Médio
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        R$ 18 mil
+                    </p>
+                </div>
+
+                <!-- Plus Sign -->
+                <div class="text-3xl sm:text-4xl lg:text-5xl font-bold"></div>
+
+                <!-- Taxa Franquia -->
+                <div class="flex flex-col items-center text-center">
+                    <Image
+                        src={Icone_Franquia_6}
+                        alt="Icone Retorno do Capital"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Retorno do Capital
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        18 a 24 meses
+                    </p>
+                </div>
+
+                <!-- Plus Sign -->
+                <div class="text-3xl sm:text-4xl lg:text-5xl font-bold"></div>
+
+                <!-- Capital Giro -->
+                <div class="flex flex-col items-center text-center">
+                    <Image
+                        src={Icone_Franquia_7}
+                        alt="Icone Lucro Líquido"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Lucro Líquido
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        16% a 22%
+                    </p>
+                </div>
+
+                <!-- Equals Sign -->
+                <div class="text-3xl sm:text-4xl lg:text-5xl font-bold"></div>
+
+                <!-- Total Aporte -->
+                <div class="flex flex-col items-center text-center">
+                    <Image
+                        src={Icone_Franquia_8}
+                        alt="Icone Taxa de Royalties"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Taxa de Royalties
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        5% Fat. Bruto
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Button -->
+        <div class="w-full flex justify-center">
+            <Btn
+                bgColor="transparent"
+                textColor="#FFFFFF"
+                text="QUERO SABER MAIS INFORMAÇÕES"
+                borderColor="#FFFFFF"
+                radius={true}
+            />
+        </div>
+    </div>
+</section>

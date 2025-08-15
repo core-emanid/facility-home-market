@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  astro-dev:
+    # Override for development with additional features
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/dist
+      - /app/.astro
+    # Enable interactive mode for better development experience
+    stdin_open: true
+    tty: true 

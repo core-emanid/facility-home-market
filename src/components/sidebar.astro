@@ -49,6 +49,14 @@ function closeSidebar() {
           onclick="closeSidebar()"
           class="border-none text-[#494F4F] text-center"
           type="button"
+          href="/franquia">Franquia</a
+        >
+      </li>
+      <li>
+        <a
+          onclick="closeSidebar()"
+          class="border-none text-[#494F4F] text-center"
+          type="button"
           href="/#products">Produtos</a
         >
       </li>
@@ -79,19 +87,15 @@ function closeSidebar() {
       <li>
         <a
           onclick="closeSidebar()"
-          class="border-none text-[#494F4F] text-center"
-          type="button"
-          href="/franquia">Franquia</a
-        >
-      </li>
-      <li>
-        <a
-          onclick="closeSidebar()"
           href={whatsappLinkLicenciado}
           type="button"
           class="border-none text-base-100 rounded-full bg-secondary font-bold"
         >
-          Seja um licenciado
+          {
+            Astro.url.pathname === "/franquia"
+              ? "Seja um franqueado"
+              : "Seja um licenciado"
+          }
         </a>
       </li>
       <li>

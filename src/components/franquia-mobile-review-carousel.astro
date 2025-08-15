@@ -1,0 +1,113 @@
+---
+import 'swiper/css';
+import Image from "astro/components/Image.astro";
+import prevIcon from '../images/anterior.svg';
+import nextIcon from '../images/proxima.svg';
+import {reviews} from '../utils/franquia-reviews.json';
+
+function getPrevSlideId(id: number): string{
+    const prevId = id - 1 !== 0 ? id - 1 : reviews[reviews.length - 1]['id'];
+    return `#slide-${prevId}`;
+}
+
+function getNextSlideId(id: number): string{
+    const nextId = id + 1 < reviews.length + 1? id + 1 : reviews[0]['id'];
+    return `#slide-${nextId}`;
+}
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/franquia/*.png');
+---
+
+<!-- Desktop -->
+<div class="w-full flex justify-center shadow-xl rounded-2xl p-4 max-md:hidden">
+    <div id='review-carousel' class="carousel w-full max-w-[750px] min-h-[300px]">
+        {
+            reviews.map((slide) => (
+                <div id={`slide-${slide.id}`} class="carousel-item relative w-full">
+                    
+                    <div class="flex flex-col items-center max-sm:px-2">
+                        <div class="w-[60%] lg:w-full card-body text-justify text-xl pb-2">
+                            <p class="p-4">"{slide.text}"</p>
+                        </div>
+                                    
+                        <div class="flex flex-row items-center w-full">
+                            <div class="flex flex-row w-full justify-center lg:justify-start p-4">
+                                <Image src={images[`/src/images/franquia/${slide.image}`]()} 
+                                    alt={`Foto de ${slide.name}`} class="rounded-full relative z-1" width={100} />
+                                <span class="flex flex-col pl-4 justify-center self-center text-xl">
+                                    <h3 class="font-extrabold">{slide.name}</h3>
+                                    <p class="font-semibold">{slide.location}</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 bottom-0">
+                        <div class="flex justify-end align-end gap-2 w-full bottom-0">
+                            <a href={getPrevSlideId(slide.id)} class="btn btn-circle rounded-full bg-accent text-white font-extrabold text-xl px-3 py-1">
+                                <Image src={prevIcon} alt="seta de navegação - slide anterior"/>
+                            </a> 
+                            <a href={getNextSlideId(slide.id)} class="btn btn-circle rounded-full bg-accent text-white font-extrabold text-xl px-3 py-1">
+                                <Image src={nextIcon} alt="seta de navegação - slide posterior"/>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            ))
+        }
+    </div>
+</div>
+
+<!-- Mobile -->
+<div class="w-full flex justify-center shadow-sm rounded-2xl p-4 lg:hidden">
+    <div class="swiper-review w-full max-w-[750px] min-h-[300px]">
+        <div class="swiper-wrapper" role="group">
+            {
+                reviews.map((slide) => (
+                    <div class="h-full w-full swiper-slide">
+            
+                        <div class="flex flex-col items-center justify-between px-6 h-full">
+                            <div class="w-[60%] lg:w-full text-justify text-xl pb-2">
+                                <p class="py-2 px-10">"{slide.text}"</p>
+                            </div>
+                                        
+                            <div class="flex flex-row items-center w-full">
+                                <div class="flex flex-row w-full justify-center lg:justify-start p-4">
+                                    <Image src={images[`/src/images/franquia/${slide.image}`]()} 
+                                    alt={`Foto de ${slide.name}`} class="rounded-full relative z-1" width={100} />
+                                    <span class="flex flex-col pl-4 justify-center self-center text-xl">
+                                        <h3 class="font-extrabold">{slide.name}</h3>
+                                        <p class="font-semibold">{slide.location}</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    import Swiper from 'swiper';
+    import { Autoplay } from 'swiper/modules';
+
+    Swiper.use([Autoplay])
+    let swiperReview = new Swiper('.swiper-review', {
+        speed: 1400,
+        loop: true,
+        slidesPerView: 1,
+        autoplay: {
+            delay: 6000,
+        },
+        freeMode: {
+            enabled: false
+        },
+        shortSwipes:true,
+        centeredSlides: true,
+        centeredSlidesBounds: true
+    });
+</script>

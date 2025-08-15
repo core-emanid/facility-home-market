@@ -1,14 +1,19 @@
 ---
-import Btn from "../../components/cta-button.astro";
+import { Image } from "astro:assets";
+import Btn from "../../components/franquia-cta-btn.astro";
+import Imagem_Cesto from "../../images/franquia/Imagem_Cesto.png";
 ---
 
-<section class="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 overflow-hidden bg-white">
+<section
+    class="relative py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 overflow-hidden bg-white"
+>
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
-        <div 
-            class="absolute inset-0" 
+        <div
+            class="absolute inset-0"
             style="background-image: url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%2300a651%22 fill-opacity=%220.1%22%3E%3Cpath d=%22M10 10h10v10H10zM25 10h10v10H25zM40 10h10v10H40zM10 25h10v10H10zM25 25h10v10H25zM40 25h10v10H40zM10 40h10v10H10zM25 40h10v10H25zM40 40h10v10H40z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"
-        ></div>
+        >
+        </div>
     </div>
 
     <div class="max-w-7xl mx-auto relative z-10">
@@ -17,38 +22,48 @@ import Btn from "../../components/cta-button.astro";
             <div class="space-y-8 sm:space-y-10 lg:space-y-12">
                 <!-- Main Heading -->
                 <div>
-                    <h2 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
-                        <span class="font-bold">Números</span> que de fato refletem o <span class="font-bold">nosso negócio</span>
+                    <h2
+                        class="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-thin text-gray-900 leading-tight"
+                    >
+                        <span class="font-bold">Números</span> que de fato refletem
+                        o <span class="font-bold">nosso negócio</span>
                     </h2>
                 </div>
 
                 <!-- Highlighted Units Box -->
-                <div class="bg-green-600 rounded-xl p-8 sm:p-10 lg:p-12 shadow-lg">
+                <div
+                    class="bg-green-600 rounded-xl p-8 sm:p-10 lg:p-12 shadow-lg"
+                >
                     <div class="text-center sm:text-left">
-                        <p class="text-white text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold">
-                            Somos <span class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">16</span> unidades
+                        <p
+                            class="text-white text-center text-2xl sm:text-3xl lg:text-4xl xl:text-4xl font-thin"
+                        >
+                            Somos <span class="font-bold">16</span> unidades
                         </p>
                     </div>
                 </div>
 
                 <!-- Call to Action Text -->
                 <div>
-                    <p class="text-gray-800 text-xl sm:text-2xl lg:text-3xl font-medium leading-relaxed">
+                    <p
+                        class="text-gray-800 text-xl text-center sm:text-2xl lg:text-3xl font-medium leading-relaxed"
+                    >
                         Estamos prontos para te ajudar a abrir a sua franquia.
                     </p>
                 </div>
             </div>
 
             <!-- Right Section - Illustration and Button -->
-            <div class="flex flex-col items-center lg:items-end space-y-10 lg:space-y-12">
+            <div
+                class="flex flex-col items-center lg:items-end space-y-10 lg:space-y-12"
+            >
                 <!-- Shopping Basket Illustration -->
-                <div class="w-56 sm:w-64 lg:w-72 xl:w-80 h-auto">
-                    <img 
-                        src="/src/images/franquia/Imagem_Cesto.png" 
-                        alt="Cesto de compras" 
-                        class="w-full h-auto object-contain drop-shadow-lg"
-                    />
-                </div>
+                <Image
+                    src={Imagem_Cesto}
+                    alt="Icone Franquia"
+                    width={500}
+                    height={500}
+                />
 
                 <!-- Call to Action Button -->
                 <div class="w-full sm:w-auto">
@@ -57,10 +72,10 @@ import Btn from "../../components/cta-button.astro";
                         textColor="#00a651"
                         text="AGENDAR REUNIÃO COMPLETA"
                         borderColor="#00a651"
+                        radius={true}
                     />
                 </div>
             </div>
         </div>
     </div>
 </section>
-

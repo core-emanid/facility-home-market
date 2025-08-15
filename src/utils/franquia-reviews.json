@@ -1,0 +1,25 @@
+{
+    "reviews": [
+        {
+            "id": 1,
+            "name": "Ana Maria",
+            "location": "Jacareí / SP",
+            "image": "depoimentos-sem-foto.png",
+            "text": "Foi acolhida pela família Facility como eles mesmos chamam, com total dedicação. Estou indo para minha quarta operação."
+        },
+        {
+            "id": 2,
+            "name": "Carlos Silva",
+            "location": "São Paulo / SP",
+            "image": "depoimentos-sem-foto.png",
+            "text": "A Facility transformou completamente minha experiência como franqueado. O suporte é incrível e os resultados superaram todas as expectativas."
+        },
+        {
+            "id": 3,
+            "name": "Maria Santos",
+            "location": "Campinas / SP",
+            "image": "depoimentos-sem-foto.png",
+            "text": "Como moradora, a Facility facilitou muito minha vida. Produtos de qualidade 24h por dia, sem precisar sair do condomínio."
+        }
+    ]
+}

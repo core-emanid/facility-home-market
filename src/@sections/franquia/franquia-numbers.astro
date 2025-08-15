@@ -1,28 +1,50 @@
 ---
-import Btn from "../../components/cta-button.astro";
+import { Image } from "astro:assets";
+import Btn from "../../components/franquia-cta-btn.astro";
+import Icone_Franquia_1 from "../../images/franquia/Icone_Franquia_1.png";
+import Icone_Franquia_2 from "../../images/franquia/Icone_Franquia_2.png";
+import Icone_Franquia_3 from "../../images/franquia/Icone_Franquia_3.png";
+import Icone_Franquia_4 from "../../images/franquia/Icone_Franquia_4.png";
+import Icone_Franquia_5 from "../../images/franquia/Icone_Franquia_5.png";
+import Icone_Franquia_6 from "../../images/franquia/Icone_Franquia_6.png";
+import Icone_Franquia_7 from "../../images/franquia/Icone_Franquia_7.png";
+import Icone_Franquia_8 from "../../images/franquia/Icone_Franquia_8.png";
 ---
 
 <section class="bg-green-600 py-12 sm:py-16 lg:py-20 px-6 sm:px-8 lg:px-12">
     <div class="max-w-7xl mx-auto">
         <!-- Title -->
         <div class="text-center mb-12 sm:mb-16 lg:mb-20">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4">
-                Sobre a franquia Facility Home Market
+            <h2
+                class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white mb-4"
+            >
+                Sobre a franquia <span class="font-bold"
+                    >Facility Home Market</span
+                >
             </h2>
         </div>
 
         <!-- Investment Breakdown Section -->
         <div class="mb-12 sm:mb-16 lg:mb-20">
-            <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 text-white">
+            <div
+                class="flex flex-col lg:flex-row flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 text-white"
+            >
                 <!-- Capital Aporte -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-teal-300 rounded-full flex items-center justify-center mb-3">
-                        <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-teal-700" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <p class="text-sm sm:text-base lg:text-lg font-semibold">Capital Aporte</p>
-                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">R$ 42 mil</p>
+                <div
+                    class="flex flex-col items-center justify-around text-center"
+                >
+                    <Image
+                        src={Icone_Franquia_1}
+                        alt="Icone Capital Aporte"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Capital Aporte
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        R$ 42 mil
+                    </p>
                 </div>
 
                 <!-- Plus Sign -->
@@ -30,13 +52,18 @@ import Btn from "../../components/cta-button.astro";
 
                 <!-- Taxa Franquia -->
                 <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-teal-300 rounded-full flex items-center justify-center mb-3">
-                        <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-teal-700" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01 1l-4.7 6.3c-.37.5-.58 1.1-.58 1.7V20c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2z"/>
-                        </svg>
-                    </div>
-                    <p class="text-sm sm:text-base lg:text-lg font-semibold">Taxa Franquia</p>
-                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">R$ 15 mil</p>
+                    <Image
+                        src={Icone_Franquia_2}
+                        alt="Icone Taxa Franquia"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Taxa Franquia
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        R$ 15 mil
+                    </p>
                 </div>
 
                 <!-- Plus Sign -->
@@ -44,13 +71,18 @@ import Btn from "../../components/cta-button.astro";
 
                 <!-- Capital Giro -->
                 <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-teal-300 rounded-full flex items-center justify-center mb-3">
-                        <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-teal-700" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                    </div>
-                    <p class="text-sm sm:text-base lg:text-lg font-semibold">Capital Giro</p>
-                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">R$ 10 mil</p>
+                    <Image
+                        src={Icone_Franquia_3}
+                        alt="Icone Capital Giro"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Capital Giro
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        R$ 10 mil
+                    </p>
                 </div>
 
                 <!-- Equals Sign -->
@@ -58,64 +90,107 @@ import Btn from "../../components/cta-button.astro";
 
                 <!-- Total Aporte -->
                 <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-teal-300 rounded-full flex items-center justify-center mb-3">
-                        <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-teal-700" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                    </div>
-                    <p class="text-sm sm:text-base lg:text-lg font-semibold">Total Aporte</p>
-                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">R$ 67 mil</p>
+                    <Image
+                        src={Icone_Franquia_4}
+                        alt="Icone Total Aporte"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Total Aporte
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        R$ 67 mil
+                    </p>
                 </div>
             </div>
         </div>
 
         <!-- Divider -->
-        <div class="border-t-2 border-white border-dashed mb-12 sm:mb-16 lg:mb-20"></div>
+        <div
+            class="border-t-4 border-white border-dashed mb-12 sm:mb-16 lg:mb-20"
+        >
+        </div>
 
         <!-- Financial Performance Metrics -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-20">
-            <!-- Faturamento Bruto Médio -->
-            <div class="flex flex-col items-center text-center text-white">
-                <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-teal-300 rounded-full flex items-center justify-center mb-3">
-                    <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-teal-700" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/>
-                    </svg>
+        <div class="mb-12 sm:mb-16 lg:mb-20">
+            <div
+                class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 text-white"
+            >
+                <!-- Faturamento Bruto Médio -->
+                <div
+                    class="flex flex-col items-center justify-around text-center"
+                >
+                    <Image
+                        src={Icone_Franquia_5}
+                        alt="Icone Faturamento Bruto Médio"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Fat. Bruto Médio
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        R$ 18 mil
+                    </p>
                 </div>
-                <p class="text-sm sm:text-base lg:text-lg font-semibold mb-1">Faturamento Bruto Médio</p>
-                <p class="text-lg sm:text-xl lg:text-2xl font-bold">R$ 18 mil</p>
-            </div>
 
-            <!-- Retorno do Capital -->
-            <div class="flex flex-col items-center text-center text-white">
-                <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-teal-300 rounded-full flex items-center justify-center mb-3">
-                    <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-teal-700" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                </div>
-                <p class="text-sm sm:text-base lg:text-lg font-semibold mb-1">Retorno do Capital</p>
-                <p class="text-lg sm:text-xl lg:text-2xl font-bold">18 a 24 meses</p>
-            </div>
+                <!-- Plus Sign -->
+                <div class="text-3xl sm:text-4xl lg:text-5xl font-bold"></div>
 
-            <!-- Lucro Líquido -->
-            <div class="flex flex-col items-center text-center text-white">
-                <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-teal-300 rounded-full flex items-center justify-center mb-3">
-                    <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-teal-700" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9zM5.6 10.25c0 1.38 1.12 2.5 2.5 2.5.53 0 1.01-.16 1.42-.44l-.02.19c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5l-.02-.19c.4.28.89.44 1.42.44 1.38 0 2.5-1.12 2.5-2.5 0-1-.59-1.85-1.43-2.25.84-.4 1.43-1.25 1.43-2.25 0-1.38-1.12-2.5-2.5-2.5-.53 0-1.01.16-1.42.44l.02-.19C14.5 2.12 13.38 1 12 1S9.5 2.12 9.5 3.5l.02.19c-.4-.28-.89-.44-1.42-.44-1.38 0-2.5 1.12-2.5 2.5 0 1 .59 1.85 1.43 2.25-.84.4-1.43 1.25-1.43 2.25z"/>
-                    </svg>
+                <!-- Taxa Franquia -->
+                <div class="flex flex-col items-center text-center">
+                    <Image
+                        src={Icone_Franquia_6}
+                        alt="Icone Retorno do Capital"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Retorno do Capital
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        18 a 24 meses
+                    </p>
                 </div>
-                <p class="text-sm sm:text-base lg:text-lg font-semibold mb-1">Lucro Líquido</p>
-                <p class="text-lg sm:text-xl lg:text-2xl font-bold">16% a 22%</p>
-            </div>
 
-            <!-- Taxa de Royalties -->
-            <div class="flex flex-col items-center text-center text-white">
-                <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-teal-300 rounded-full flex items-center justify-center mb-3">
-                    <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-teal-700" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
+                <!-- Plus Sign -->
+                <div class="text-3xl sm:text-4xl lg:text-5xl font-bold"></div>
+
+                <!-- Capital Giro -->
+                <div class="flex flex-col items-center text-center">
+                    <Image
+                        src={Icone_Franquia_7}
+                        alt="Icone Lucro Líquido"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Lucro Líquido
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        16% a 22%
+                    </p>
                 </div>
-                <p class="text-sm sm:text-base lg:text-lg font-semibold mb-1">Taxa de Royalties</p>
-                <p class="text-lg sm:text-xl lg:text-2xl font-bold">5% Fat. Bruto</p>
+
+                <!-- Equals Sign -->
+                <div class="text-3xl sm:text-4xl lg:text-5xl font-bold"></div>
+
+                <!-- Total Aporte -->
+                <div class="flex flex-col items-center text-center">
+                    <Image
+                        src={Icone_Franquia_8}
+                        alt="Icone Taxa de Royalties"
+                        width={100}
+                        height={100}
+                    />
+                    <p class="text-sm sm:text-base lg:text-lg font-semibold">
+                        Taxa de Royalties
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl font-bold">
+                        5% Fat. Bruto
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -126,6 +201,7 @@ import Btn from "../../components/cta-button.astro";
                 textColor="#FFFFFF"
                 text="QUERO SABER MAIS INFORMAÇÕES"
                 borderColor="#FFFFFF"
+                radius={true}
             />
         </div>
     </div>

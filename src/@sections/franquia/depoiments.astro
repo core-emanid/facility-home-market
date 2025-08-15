@@ -4,12 +4,19 @@ import Image from 'astro/components/Image.astro';
 import prevIcon from '../../images/anterior.svg';
 import nextIcon from '../../images/proxima.svg';
 
+import Icone_Franqueado from '../../images/franquia/Icone_Franqueado.png';
+import Icone_Condominio from '../../images/franquia/Icone_Condominio.png';
+import Icone_Consumidor from '../../images/franquia/Icone_Consumidor.png';
+
+import Depoimento_Sem_Foto from '../../images/depoimentos-sem-foto.png';
+
+
 // Benefits data
 const benefits = [
     {
         title: "Benefícios para o Franqueado",
         subtitle: "Um modelo de negócio simplificado e lucrativo.",
-        icon: "M3 13h2V7H3v6zm4 0h2V7H7v6zm4 0h2V7h-2v6zm4 0h2V7h-2v6zm4 0h2V7h-2v6z",
+        icon: Icone_Franqueado,
         items: [
             "Baixo investimento",
             "Opção sem funcionários",
@@ -21,7 +28,7 @@ const benefits = [
     {
         title: "Benefícios para o Condomínio",
         subtitle: "Comodidade e valorização do seu espaço.",
-        icon: "M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z",
+        icon: Icone_Condominio,
         items: [
             "Zero custo de implantação",
             "Valorização do imóvel",
@@ -33,7 +40,7 @@ const benefits = [
     {
         title: "Benefícios para o Consumidor",
         subtitle: "Compra rápida e acessível para o dia a dia",
-        icon: "M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z",
+        icon: Icone_Consumidor,
         items: [
             "Produtos essenciais 24h",
             "Pagamento digital fácil",
@@ -50,21 +57,21 @@ const testimonials = [
         id: 1,
         name: "Ana Maria",
         location: "Jacareí / SP",
-        image: "Icone_Condominio.png",
+        image: Depoimento_Sem_Foto,
         text: "Foi acolhida pela família Facility como eles mesmos chamam, com total dedicação. Estou indo para minha quarta operação."
     },
     {
         id: 2,
         name: "Carlos Silva",
         location: "São Paulo / SP",
-        image: "Icone_Condominio.png",
+        image: Depoimento_Sem_Foto,
         text: "A Facility transformou completamente minha experiência como franqueado. O suporte é incrível e os resultados superaram todas as expectativas."
     },
     {
         id: 3,
         name: "Maria Santos",
         location: "Campinas / SP",
-        image: "Icone_Condominio.png",
+        image: Depoimento_Sem_Foto,
         text: "Como moradora, a Facility facilitou muito minha vida. Produtos de qualidade 24h por dia, sem precisar sair do condomínio."
     }
 ];
@@ -96,8 +103,8 @@ const images = import.meta.glob('/src/images/franquia/*.png');
         <div class="mb-16 sm:mb-20 lg:mb-24">
             <!-- Section Title -->
             <div class="text-center mb-12 sm:mb-16 lg:mb-20">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4">
-                    Na Facility todo mundo sai ganhando!
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-gray-900 mb-4">
+                    Na <span class="font-bold text-green-600">Facility</span> todo mundo sai ganhando!
                 </h2>
             </div>
 
@@ -107,9 +114,7 @@ const images = import.meta.glob('/src/images/franquia/*.png');
                     <div class="bg-white rounded-lg p-6 sm:p-8 lg:p-10 shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <!-- Icon -->
                         <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d={benefit.icon} />
-                            </svg>
+                            <Image src={benefit.icon} alt={benefit.title} width={96} height={96} />
                         </div>
 
                         <!-- Title -->
@@ -123,13 +128,13 @@ const images = import.meta.glob('/src/images/franquia/*.png');
                         </p>
 
                         <!-- Divider -->
-                        <div class="border-t border-blue-200 mb-6"></div>
+                        <div class="border-t-4 border-blue-400 mb-6"></div>
 
                         <!-- Benefits List -->
                         <ul class="space-y-2 sm:space-y-3">
                             {benefit.items.map((item) => (
                                 <li class="text-gray-700 text-sm sm:text-base lg:text-lg">
-                                    // {item}
+                                    <span class="text-blue-300 text-lg">//  </span>{item}
                                 </li>
                             ))}
                         </ul>
@@ -143,7 +148,7 @@ const images = import.meta.glob('/src/images/franquia/*.png');
             <!-- Section Title -->
             <div class="text-center mb-12 sm:mb-16 lg:mb-20">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4">
-                    Verdadeiros depoimentos, casos de sucesso!
+                    Verdadeiros <span class="font-bold text-green-600">depoimentos</span>, casos de sucesso!
                 </h2>
             </div>
 
@@ -161,7 +166,7 @@ const images = import.meta.glob('/src/images/franquia/*.png');
                                     <div class="flex flex-row items-center w-full">
                                         <div class="flex flex-row w-full justify-center lg:justify-start p-4">
                                             <Image 
-                                                src={images[`/src/images/franquia/${testimonial.image}`]?.() || images['/src/images/depoimentos-sem-foto.png']?.()} 
+                                                src={testimonial.image} 
                                                 alt={`Foto de ${testimonial.name}`} 
                                                 class="rounded-full relative z-1" 
                                                 width={100} 
@@ -205,7 +210,7 @@ const images = import.meta.glob('/src/images/franquia/*.png');
                                         <div class="flex flex-row items-center w-full">
                                             <div class="flex flex-row w-full justify-center lg:justify-start p-4">
                                                 <Image 
-                                                    src={images[`/src/images/franquia/${testimonial.image}`]?.() || images['/src/images/depoimentos-sem-foto.png']?.()} 
+                                                    src={testimonial.image} 
                                                     alt={`Foto de ${testimonial.name}`} 
                                                     class="rounded-full relative z-1" 
                                                     width={100} 

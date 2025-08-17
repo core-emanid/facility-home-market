@@ -1,5 +1,7 @@
 ---
-
+import { Image } from "astro:assets";
+import Imagem_Lojas from "../../images/franquia/Imagem_Lojas.png";
+import Imagem_Selo_com_frase from "../../images/franquia/Imagem_Selo_com_frase.png";
 ---
 
 <section class="relative overflow-hidden">
@@ -9,16 +11,16 @@
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <!-- Left Section: Mini-Market Imagery -->
                 <div class="relative">
-                    <img
-                        src="/src/images/franquia/Imagem_Lojas.png"
+                    <Image
+                        src={Imagem_Lojas}
                         alt="Lojas de mini mercado"
                         class="w-full h-full object-cover"
                     />
                 </div>
 
                 <div class="text-white space-y-8 sm:space-y-10 lg:space-y-12">
-                    <img
-                        src="/src/images/franquia/Imagem_Selo_com_frase.png"
+                    <Image
+                        src={Imagem_Selo_com_frase}
                         alt="SELO DE APROVADO"
                         class="w-full h-full object-cover"
                     />
